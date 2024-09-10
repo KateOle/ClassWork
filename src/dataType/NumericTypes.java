@@ -182,6 +182,7 @@ public class NumericTypes {
 
             System.out.println("Working days " + r);
             System.out.println("Weekends " + v);
+
         }
 
   // 95. З початку доби минуло h годин, m хвилин, s секунд (0 < h < 12, 0 < m < 60, 0 < s < 60). За даними числами h, m, s
