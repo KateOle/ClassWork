@@ -26,7 +26,8 @@ public class Main {
      //   NumericTypes.firstDiitAfterComa();
      //   NumericTypes.amountOfWorkDaysAndWeekends();
        //   Calculator.calculatorIndexMassOfBody();
-      NumericTypes.angleOfClockWise();
+     // NumericTypes.angleOfClockWise();
+        NumericTypes.angleOfMinuteClockWise();
 
 
 //        int[][] matric = new int[3][3];

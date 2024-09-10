@@ -129,9 +129,9 @@ public class NumericTypes {
 
 
     public static void amountOfTables() {
-   //79. Школа вирішила замінити парти у трьох кабінетах. Кожна парта розрахована на двох учнів. Враховуючи кількість учнів
-    // у кожному класі, надрукуйте найменшу можливу кількість парт, які треба придбати. Програма повинна прочитати три
-    // цілих числа: кількість учнів в кожному з трьох класів a, b та c відповідно.
+        //79. Школа вирішила замінити парти у трьох кабінетах. Кожна парта розрахована на двох учнів. Враховуючи кількість учнів
+        // у кожному класі, надрукуйте найменшу можливу кількість парт, які треба придбати. Програма повинна прочитати три
+        // цілих числа: кількість учнів в кожному з трьох класів a, b та c відповідно.
 
         System.out.println("Pupils in 1st class ");
 
@@ -154,8 +154,8 @@ public class NumericTypes {
     }
 
     public static void firstDiitAfterComa() {
-  //94.  Вводиться додатне дійсне число a. Виведіть його першу цифру після десяткового дробу. При розв’язуванні цього
-  //  завдання не можна користуватися умовною конструкцією і циклом.
+        //94.  Вводиться додатне дійсне число a. Виведіть його першу цифру після десяткового дробу. При розв’язуванні цього
+        //  завдання не можна користуватися умовною конструкцією і циклом.
 
         System.out.println("Enter munber ");
 
@@ -163,57 +163,72 @@ public class NumericTypes {
 
         double a = scn.nextDouble();
 
-        double c = a - (int)a;
+        double c = a - (int) a;
 
         double n = c * 10;
 
-        System.out.println((int)n);
+        System.out.println((int) n);
     }
 
-        // 2. Ввести количество месяцев, и должно рассчитать количество рабочих дней и выходных
-        public static void amountOfWorkDaysAndWeekends() {
-            Scanner mies = new Scanner(System.in);
+    // 2. Ввести количество месяцев, и должно рассчитать количество рабочих дней и выходных
+    public static void amountOfWorkDaysAndWeekends() {
+        Scanner mies = new Scanner(System.in);
 
-            System.out.println("Months");
-            int m = mies.nextInt();
+        System.out.println("Months");
+        int m = mies.nextInt();
 
-            int r = m * 20;
-            int v = m * 8;
+        int r = m * 20;
+        int v = m * 8;
 
-            System.out.println("Working days " + r);
-            System.out.println("Weekends " + v);
+        System.out.println("Working days " + r);
+        System.out.println("Weekends " + v);
 
-        }
+    }
 
-  // 95. З початку доби минуло h годин, m хвилин, s секунд (0 < h < 12, 0 < m < 60, 0 < s < 60). За даними числами h, m, s
-    // визначте кут (в градусах), на який повернулаcь годинникова стрілка з початку доби і виведіть його у вигляді
-    // дійсного числа. При розв’язуванні цього завдання не можна користуватися умовними конструкціями і циклами.
+//   95. З початку доби минуло h годин, m хвилин, s секунд (0 < h < 12, 0 < m < 60, 0 < s < 60). За даними числами h, m, s
+//     визначте кут (в градусах), на який повернулаcь годинникова стрілка з початку доби і виведіть його у вигляді
+//     дійсного числа. При розв’язуванні цього завдання не можна користуватися умовними конструкціями і циклами.
 
-//    public static void angleOfClockWise() {
-//        System.out.println("Enter hours ");
-//
-//        Scanner scn = new Scanner(System.in);
-//
-//        int h = scn.nextInt();
-//
-//        System.out.println("Enter minutes ");
-//        int m = scn.nextInt();
-//
-//        System.out.println("Enter seconds ");
-//        int s = scn.nextInt();
-//
-//        double angle = 0;
-//
-//        angle = 30*h + 0.5*m +0.008333*s;
-//
-//        System.out.println(angle);
-//
-//    }
+    public static void angleOfClockWise() {
+        System.out.println("Enter hours ");
+
+        Scanner scn = new Scanner(System.in);
+
+        int h = scn.nextInt();
+
+        System.out.println("Enter minutes ");
+        int m = scn.nextInt();
+
+        System.out.println("Enter seconds ");
+        int s = scn.nextInt();
+
+        double angle = 0;
+
+        angle = 30 * h + 0.5 * m + 0.008333 * s;
+
+        System.out.println(angle);
+
+    }
 
 //  96.  З початку доби годинникова стрілка повернулася на кут a градусів. Визначте на який кут повернулась хвилинна
 //  стрілка з початку останньої години. Вхідні і вихідні дані - дійсні числа. При розв’язуванні цього завдання не можна
 //  користуватися умовними конструкціями і циклами.
 
+    public static void angleOfMinuteClockWise() {
+
+        System.out.println("Enter a Total angle ");
+
+        Scanner scn = new Scanner(System.in);
+
+       double angleTotal = scn.nextDouble();
+
+        double angleForMinute = angleTotal % 30;
+
+        double angleForMinuteWithinHour = angleForMinute * (360 / 30);  // 360 - 1 round for minute clockwise, 30 - 1 hour
+
+        System.out.println(angleForMinuteWithinHour);
+
+    }
 
 
 }
