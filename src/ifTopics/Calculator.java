@@ -55,7 +55,23 @@ public class Calculator {
 
     public static void placeOfLetters() {
 
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Enter any letter ");
+
+        char l = scanner.next().charAt(0);
+
+        System.out.println("Enter any letter ");
+
+        char l1 = scanner.next().charAt(0);
+
+        if ((int)l < (int) l1) {
+            System.out.println(l + " less then  " + l1 + " on " + (l1 - l));
+        } else if ((int)l == (int)l1) {
+            System.out.println(l + " the same as " + l1);
+        } else if ((int)l > (int)l1) {
+            System.out.println(l + " is not less then " + l1 + " on " + (l - l1));
+        }
 
     }
 
