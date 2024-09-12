@@ -1,5 +1,7 @@
 package arraysTopics;
 
+import java.util.Scanner;
+
 public class ArraysString {
 
     public static void ReduceSumOfLetters() {
@@ -76,5 +78,32 @@ public class ArraysString {
             longWord[i] = words[i];
             System.out.print(longWord[i]);
         }
+    }
+
+    public static void upperAndLowerCaseInString() {
+       // 520.  Напишіть програму, яка приймає рядок символів, і обчислює кількість великих та малих літер.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println( " Enter a string ");
+        String str1 = scn.nextLine();
+
+        char letter = 0;
+        int countUpper = 0;
+        int countLower = 0;
+
+        for (int i = 0; i < str1.length(); i++) {
+            letter = str1.charAt(i);
+            if( letter>= 60 && letter <= 90) {
+                countUpper++;
+            } else if ( letter >= 97 && letter <= 122) {
+                   countLower++;
+            }
+        }
+
+        System.out.println( " Upper case " + countUpper );
+        System.out.println( " Lower case " + countLower );
+
+
     }
 }

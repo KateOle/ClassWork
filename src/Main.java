@@ -1,6 +1,7 @@
 // import topic_If.CharProblem;
 
 
+import arraysTopics.ArraysString;
 import dataType.NumericTypes;
 import ifTopics.*;
 
@@ -28,7 +29,9 @@ public class Main {
        //   Calculator.calculatorIndexMassOfBody();
      // NumericTypes.angleOfClockWise();
       //  NumericTypes.angleOfMinuteClockWise();
-        ifTopics.Calculator.placeOfLetters();
+      //  ifTopics.Calculator.placeOfLetters();
+       // Calculator.weather();
+      //  ArraysString.upperAndLowerCaseInString();
 
 
 //        int[][] matric = new int[3][3];

@@ -72,7 +72,28 @@ public class Calculator {
         } else if ((int)l > (int)l1) {
             System.out.println(l + " is not less then " + l1 + " on " + (l - l1));
         }
-
     }
+    //  106.  Напишіть програму, в якій користувач вводить значення температури, і, якщо це значення менше або дорівнює
+        //  0 градусів Цельсія, необхідно вивести повідомлення A cold, isn’t it?. Якщо ж температура становить більше 0
+        //  і менше 10 градусів Цельсія повідомлення буде Cool., у інших випадках Nice weather we’re having..
+
+        public static void weather() {
+
+            Scanner scn = new Scanner(System.in);
+
+            System.out.println( " Enter a temperature, C ");
+
+            double t = scn.nextDouble();
+
+            if (t <= 0) {
+                System.out.println(" A cold, isn’t it? ");
+            } else if (t < 10) {
+                System.out.println(" Cool ");
+            } else
+                System.out.println(" Nice weather we’re having ");
+        }
+
+
+
 
    }
