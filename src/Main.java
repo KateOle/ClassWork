@@ -32,7 +32,9 @@ public class Main {
       //  ifTopics.Calculator.placeOfLetters();
        // Calculator.weather();
       //  ArraysString.upperAndLowerCaseInString();
-
+     // Calculator.replaceEvenNumbers1();
+      //  Calculator.traficLight();
+        Calculator.forDigitsPolindrom();
 
 //        int[][] matric = new int[3][3];
 //
