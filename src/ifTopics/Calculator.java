@@ -209,7 +209,22 @@ public class Calculator {
         } else System.out.println( "False" );
     }
 
+    public static void integerToBinary() {
+//    181. Дано однобайтове десяткове число (у межах 128-255). Перевірити, чи є двійкове подання десяткового числа паліндромом,
+//    з урахуванням зберігання старших нулів у двійковому поданні. Приклад таких десяткових чисел: 102 (у двійковому
+//        форматі 01100110), 129 (у двійковому вигляді 10000001) і т. д.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println( " Enter a number between 128 - 255 ");
+
+        int n = scn.nextInt();
 
 
+
+        if (Integer.toBinaryString(n).substring(0, 4).equals(new StringBuilder(Integer.toBinaryString(n).substring(4, 8)).reverse().toString())){
+            System.out.println( " True" );
+        } else System.out.println( "False" );
+    }
 
    }

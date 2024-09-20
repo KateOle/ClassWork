@@ -34,7 +34,8 @@ public class Main {
       //  ArraysString.upperAndLowerCaseInString();
      // Calculator.replaceEvenNumbers1();
       //  Calculator.traficLight();
-        Calculator.forDigitsPolindrom();
+      //  Calculator.forDigitsPolindrom();
+        Calculator.integerToBinary();
 
 //        int[][] matric = new int[3][3];
 //
