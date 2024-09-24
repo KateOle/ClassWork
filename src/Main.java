@@ -35,7 +35,9 @@ public class Main {
      // Calculator.replaceEvenNumbers1();
       //  Calculator.traficLight();
       //  Calculator.forDigitsPolindrom();
-        Calculator.integerToBinary();
+      //  Calculator.integerToBinary();
+       // Calculator.nextDay();
+        Calculator.previousDate();
 
 //        int[][] matric = new int[3][3];
 //
