@@ -4,6 +4,7 @@
 import arraysTopics.ArraysString;
 import dataType.NumericTypes;
 import ifTopics.*;
+import loopsTopics.LoopFor;
 
 public class Main {
 
@@ -37,7 +38,10 @@ public class Main {
       //  Calculator.forDigitsPolindrom();
       //  Calculator.integerToBinary();
        // Calculator.nextDay();
-        Calculator.previousDate();
+      //  Calculator.previousDate();
+        //loopsTopics.LoopFor.sumOfElements();
+       // LoopFor.averNumbers();
+        LoopFor.power();
 
 //        int[][] matric = new int[3][3];
 //
