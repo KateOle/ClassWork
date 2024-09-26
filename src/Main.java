@@ -43,7 +43,11 @@ public class Main {
        // LoopFor.averNumbers();
        // LoopFor.power();
       // LoopFor.SumOfPower();
-        LoopFor.minTempofMonth();
+      //  LoopFor.minTempofMonth();
+       // LoopFor.minTempofMonthWhile();
+       // LoopFor.steps();
+       // LoopFor.stepsFor();
+        LoopFor.isAutomorfnNumber();
 
 //        int[][] matric = new int[3][3];
 //

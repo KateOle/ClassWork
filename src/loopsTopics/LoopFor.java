@@ -107,13 +107,13 @@ public class LoopFor {
 
         System.out.println("Enter how many days you are going to measure temperature from 1 till 31");
         int n = scn.nextInt();
-       // int condOfEnd = 0;
+        // int condOfEnd = 0;
         int compar = 0;
 
-        for (int i = n; i > 0; i--){
+        for (int i = n; i > 0; i--) {
 
             int t = scn.nextInt();
-            if(compar > t) {
+            if (compar > t) {
                 compar = t;
             }
 
@@ -123,4 +123,108 @@ public class LoopFor {
         System.out.println(compar);
 
     }
+
+    public static void minTempofMonthWhile() {
+//  263.  Учні 5 класу вели щоденники спостереження за погодою і щодня записували денну температуру. Знайдіть найнижчу
+//    температуру за весь час спостережень. Якщо температура знижувалась нижче -15 градусів, необхідно вивести Yes,
+//    у протилежному випадку No. Програма отримує на вхід кількість днів, протягом яких проводилося спостереження
+//    n (1 ≤ n ≤ 31), потім для кожного дня вводиться температура.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter how many days you are going to measure temperature from 1 till 31");
+        int n = scn.nextInt();
+
+        int compar = 0;
+
+        int i = 0;
+        while (i < n) {
+
+            int t = scn.nextInt();
+            if (compar > t) {
+                compar = t;
+            }
+            i++;
+        }
+        if (compar < -15) System.out.println(" Yes ");
+        else System.out.println(" No ");
+        System.out.println(compar);
+
+    }
+
+    public static void steps() {
+//    268. За даним натуральним числом n (n ≤ 9) виведіть драбинку з n сходинок як у вихідних даних, n-а сходинка складається
+//    з чисел від 1 до n без пропусків.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter amount of steps ");
+        int n = scn.nextInt();
+
+        String str = "";
+        int i = 1;
+
+        while (i <= n) {
+
+            str = str + i;
+            System.out.println(str);
+            i++;
+        }
+    }
+
+    public static void stepsFor() {
+//    268. За даним натуральним числом n (n ≤ 9) виведіть драбинку з n сходинок як у вихідних даних, n-а сходинка складається
+//    з чисел від 1 до n без пропусків.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter amount of steps ");
+        int n = scn.nextInt();
+
+        String str = "";
+
+        for (int i = 1; i <= n; i++) {
+            str = str + i;
+            System.out.println(str);
+
+        }
+    }
+
+
+    public static void isAutomorfnNumber() {
+//   270. Дано натуральне число n. Визначити, чи є воно автоморфним числом. Примітка. Автоморфне число - число, квадрат
+//    якого рівний останнім розрядами квадрата цього числа: 5 - 25, 6 - 36, 25 - 625.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter number ");
+
+        int n = scn.nextInt();
+
+        int pow = (int) Math.pow(n, 2);
+
+        int count = 1;
+        while (true) {
+            if (n / 10 > 0) {
+                count++;
+                n = n / 10;
+            } else break;
+        }
+
+        int endOfPow = 0;
+        int endOfN = 0;
+        //int beginOfNumb = 0;
+        for (int i = 0; i < count; i++) {
+            endOfPow = pow % 10;
+            pow = pow / 10;
+
+            endOfN = n % 10;
+            n = n / 10;
+
+        }
+        if (endOfPow == endOfN) {
+            System.out.println("True");
+        } else System.out.println("False");
+    }
+
 }
