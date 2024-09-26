@@ -41,7 +41,9 @@ public class Main {
       //  Calculator.previousDate();
         //loopsTopics.LoopFor.sumOfElements();
        // LoopFor.averNumbers();
-        LoopFor.power();
+       // LoopFor.power();
+      // LoopFor.SumOfPower();
+        LoopFor.minTempofMonth();
 
 //        int[][] matric = new int[3][3];
 //

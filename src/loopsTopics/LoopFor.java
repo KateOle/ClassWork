@@ -41,13 +41,13 @@ public class LoopFor {
             i++;
             num = scn.nextInt();
         }
-        count = count/i;
+        count = count / i;
 
         System.out.println(count);
     }
 
     public static void power() {
-   //260. Дано цілі числа a і b. Обчислити ab, не використовуючи операцію піднесення до степеня.
+        //260. Дано цілі числа a і b. Обчислити ab, не використовуючи операцію піднесення до степеня.
 
         Scanner scn = new Scanner(System.in);
 
@@ -61,12 +61,66 @@ public class LoopFor {
 
         int count = 1;
         int a = 0;
-        while ( a < pow ){
+        while (a < pow) {
             count = num * count;
             a++;
         }
 
         System.out.println(count);
+
+    }
+
+    public static void SumOfPower() {
+//   261. Напишіть програму, яка зчитує числа (по одному в рядку) до тих пір, поки сума введених чисел не буде дорівнювати 0
+//    і відразу після цього виводить суму квадратів всіх введених чисел. Гарантується, що в якийсь момент сума введених
+//    чисел дорівнюватиме 0, після цього зчитування продовжувати не потрібно.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println(" Enter some number ");
+
+
+        int sum = 0;
+        double sumOfPower = 0;
+
+        while (true) {
+            int num = scn.nextInt();
+
+            sum = num + sum;
+
+            sumOfPower = sumOfPower + Math.pow(num, 2);
+
+            if (sum == 0) {
+                break;
+            }
+        }
+        System.out.println(sumOfPower);
+    }
+
+    public static void minTempofMonth() {
+//  263.  Учні 5 класу вели щоденники спостереження за погодою і щодня записували денну температуру. Знайдіть найнижчу
+//    температуру за весь час спостережень. Якщо температура знижувалась нижче -15 градусів, необхідно вивести Yes,
+//    у протилежному випадку No. Програма отримує на вхід кількість днів, протягом яких проводилося спостереження
+//    n (1 ≤ n ≤ 31), потім для кожного дня вводиться температура.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter how many days you are going to measure temperature from 1 till 31");
+        int n = scn.nextInt();
+       // int condOfEnd = 0;
+        int compar = 0;
+
+        for (int i = n; i > 0; i--){
+
+            int t = scn.nextInt();
+            if(compar > t) {
+                compar = t;
+            }
+
+        }
+        if (compar < -15) System.out.println(" Yes ");
+        else System.out.println(" No ");
+        System.out.println(compar);
 
     }
 }
