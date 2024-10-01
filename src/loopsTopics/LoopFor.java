@@ -1,5 +1,6 @@
 package loopsTopics;
 
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class LoopFor {
@@ -227,4 +228,72 @@ public class LoopFor {
         } else System.out.println("False");
     }
 
+    public static void oddNaturalNumer() {
+   // 271. Дано натуральне число n. Надрукуйте всі n-значні непарні натуральні числа в порядку спадання.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter of n-digit number");
+
+        int n = scn.nextInt();
+
+        int max = (int) Math.pow(10, n) - 1;
+        int min = (int) Math.pow(10, n-1);
+
+        for (int i = max; i >= min; i--) {
+            if (i % 2 != 0) {
+                System.out.printf("%d ", i);
+            }
+        }
+    }
+
+public static void algorithmEuclida() {
+//    272. Дано два натуральних числа a і b. Розробити програму для визначення найбільшого спільного
+//    дільника (НСД) заданих чисел. Використайте алгоритм Евкліда .
+//    Алгоритм:
+//            Пусть есть два числа a и b ( a>b ).
+//            Найти остаток от деления a на b ( r=a%b ).
+//            Если остаток r=0, то b — это НОД.
+//    Если остаток r!=0, заменить a на b, а b на r, и повторить шаги до тех пор, пока остаток не станет 0.
+
+    Scanner scn = new Scanner(System.in);
+
+    System.out.println("Enter first number");
+
+    int a = scn.nextInt();
+
+    System.out.println("Enter second number");
+
+    int b = scn.nextInt();
+
+    LinkedList<Integer> d = new LinkedList<>();
+    int div = 2;
+    while (a > 1){
+      //  System.out.println("..." + div);
+        if (a % div == 0){
+            a = a / div;
+           // System.out.println(div + " " + a);
+            d.add(div);
+        }
+        else{
+            div += 1;
+        }
+    }
+    LinkedList<Integer> e = new LinkedList<>();
+    int div1 = 2;
+    while (b > 1){
+        //  System.out.println("..." + div);
+        if (b % div1 == 0){
+            b = b / div1;
+          //  System.out.println(div1 + " " + b);
+            e.add(div1);
+        }
+        else{
+            div1 += 1;
+        }
+    }
+   // d.toArray();
+
+
+}
 }

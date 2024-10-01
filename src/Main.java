@@ -47,7 +47,8 @@ public class Main {
        // LoopFor.minTempofMonthWhile();
        // LoopFor.steps();
        // LoopFor.stepsFor();
-        LoopFor.isAutomorfnNumber();
+       // LoopFor.isAutomorfnNumber();
+        LoopFor.oddNaturalNumer();
 
 //        int[][] matric = new int[3][3];
 //
