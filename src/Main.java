@@ -50,7 +50,9 @@ public class Main {
        // LoopFor.isAutomorfnNumber();
       //  LoopFor.oddNaturalNumer();
        // LoopFor.algorithmEuclida1();
-        LoopFor.numberOfDigitFromTheEnd();
+       // LoopFor.numberOfDigitFromTheEnd();
+      //  LoopFor.polindrom();
+        LoopFor.rowOfCards();
 
 //        int[][] matric = new int[3][3];
 //

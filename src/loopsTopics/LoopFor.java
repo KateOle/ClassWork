@@ -388,18 +388,54 @@ public class LoopFor {
         int b = scn.nextInt();
 
 
+        for (int i = a; i <= b; i++) {
+            int lastDigitOfCurrentNumber = i % 10;
+            int firstDigitOfCurrentNumber = i / 1000;
+            int secondDigitFromTheEndOfCurrentNumb = (i / 10) % 10;
+            int secondDigitOfCurrentNumber = (i / 100) % 10;
 
-       for (int i = a; i <= b; i++) {
-           int lastDigitOfCurrentNumber = a % 10;
-           int firstDigitOfCurrentNumber = a / 1000;
-           int secondDigitFromTheEndOfCurrentNumb = (a / 10) % 10;
-           int secondDigitOfCurrentNumber = (a / 100) % 10;
-
-           if (lastDigitOfCurrentNumber == firstDigitOfCurrentNumber) {
-
-           }
+            if (lastDigitOfCurrentNumber == firstDigitOfCurrentNumber & secondDigitFromTheEndOfCurrentNumb == secondDigitOfCurrentNumber) {
+                System.out.println(i);
+            }
         }
 
+    }
+
+
+
+    public static void rowOfCards() {
+        //    296. Для настільної гри використовуються картки з номерами від 1 до n. Одна картка загубилася. Знайдіть її,
+//    знаючи номери решти карток. Користувач вводить ціле число n, далі n-1 номери решти карток
+//    (різні числа від 1 до n). Програма повинна вивести номер втраченої картки.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter number of card");
+
+        int a = scn.nextInt();
+
+        int [] numbers = new int[a];
+
+
+        for (int i = 0; i < numbers.length - 1; i++){
+                  numbers[i] = scn.nextInt();
         }
+
+        for (int i = 1; i <= a; i++) {
+            boolean fi = false;
+            for (int j = 0; j < numbers.length; j++) {
+                if(i == numbers[j]) {
+                   fi = true;
+                }
+            } if (!fi) {
+                System.out.println(i);
+            }
+
+        }
+
+
     }
-    }
+
+
+}
+
