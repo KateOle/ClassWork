@@ -229,7 +229,7 @@ public class LoopFor {
     }
 
     public static void oddNaturalNumer() {
-   // 271. Дано натуральне число n. Надрукуйте всі n-значні непарні натуральні числа в порядку спадання.
+        // 271. Дано натуральне число n. Надрукуйте всі n-значні непарні натуральні числа в порядку спадання.
 
         Scanner scn = new Scanner(System.in);
 
@@ -238,7 +238,7 @@ public class LoopFor {
         int n = scn.nextInt();
 
         int max = (int) Math.pow(10, n) - 1;
-        int min = (int) Math.pow(10, n-1);
+        int min = (int) Math.pow(10, n - 1);
 
         for (int i = max; i >= min; i--) {
             if (i % 2 != 0) {
@@ -247,7 +247,7 @@ public class LoopFor {
         }
     }
 
-public static void algorithmEuclida() {
+    public static void algorithmEuclida() {
 //    272. Дано два натуральних числа a і b. Розробити програму для визначення найбільшого спільного
 //    дільника (НСД) заданих чисел. Використайте алгоритм Евкліда .
 //    Алгоритм:
@@ -256,44 +256,150 @@ public static void algorithmEuclida() {
 //            Если остаток r=0, то b — это НОД.
 //    Если остаток r!=0, заменить a на b, а b на r, и повторить шаги до тех пор, пока остаток не станет 0.
 
-    Scanner scn = new Scanner(System.in);
+        Scanner scn = new Scanner(System.in);
 
-    System.out.println("Enter first number");
+        System.out.println("Enter first number");
 
-    int a = scn.nextInt();
+        int a = scn.nextInt();
 
-    System.out.println("Enter second number");
+        System.out.println("Enter second number");
 
-    int b = scn.nextInt();
+        int b = scn.nextInt();
 
-    LinkedList<Integer> d = new LinkedList<>();
-    int div = 2;
-    while (a > 1){
-      //  System.out.println("..." + div);
-        if (a % div == 0){
-            a = a / div;
-           // System.out.println(div + " " + a);
-            d.add(div);
+        LinkedList<Integer> d = new LinkedList<>();
+        int div = 2;
+        while (a > 1) {
+            //  System.out.println("..." + div);
+            if (a % div == 0) {
+                a = a / div;
+                // System.out.println(div + " " + a);
+                d.add(div);
+            } else {
+                div += 1;
+            }
         }
-        else{
-            div += 1;
+        LinkedList<Integer> e = new LinkedList<>();
+        int div1 = 2;
+        while (b > 1) {
+            //  System.out.println("..." + div);
+            if (b % div1 == 0) {
+                b = b / div1;
+                //  System.out.println(div1 + " " + b);
+                e.add(div1);
+            } else {
+                div1 += 1;
+            }
+        }
+        // d.toArray();
+    }
+
+    public static void algorithmEuclida1() {
+//    272. Дано два натуральних числа a і b. Розробити програму для визначення найбільшого спільного
+//    дільника (НСД) заданих чисел. Використайте алгоритм Евкліда .
+//    Алгоритм:
+//            Пусть есть два числа a и b ( a>b ).
+//            Найти остаток от деления a на b ( r=a%b ).
+//            Если остаток r=0, то b — это НОД.
+//    Если остаток r!=0, заменить a на b, а b на r, и повторить шаги до тех пор, пока остаток не станет 0.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter first number");
+
+        int a = scn.nextInt();
+
+        System.out.println("Enter second number");
+
+        int b = scn.nextInt();
+//        int a = 10;
+//        int b = 10;
+
+        int r = a % b;
+        int temp = 0;
+        if (a == b) {
+            System.out.println(a);
+            return;
+        }
+        if (b > a) {
+            temp = a;
+            a = b;
+            b = temp;
+        }
+
+        int maxIterations = 50;
+        while (r > 0 && maxIterations > 0) {
+            a = b;
+            b = r;
+            r = a % b;
+            maxIterations--;
+        }
+        System.out.println(b);
+
+
+    }
+
+    public static void numberOfDigitFromTheEnd() {
+//   290. Дано натуральне число n. Визначити номер деякої заданої цифри d в ньому, відраховуючи від кінця числа.
+//    Якщо такої цифри немає, відповіддю має бути число 0; якщо таких цифр в числі кілька, повинен бути визначений номер
+//    позиції найправішої з них.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter long number");
+
+        int a = scn.nextInt();
+
+        System.out.println("Enter 1 digit number");
+
+        int b = scn.nextInt();
+
+        int result = 0;
+
+        int curentNumber = a;
+
+        int count = 0;
+        int curentDigit = -1;
+
+        while (curentNumber != 0) {
+            curentDigit = curentNumber % 10;
+            curentNumber = curentNumber / 10;
+            count++;
+
+            if (curentDigit == b) {
+                result = count;
+                break;
+            }
+        }
+        System.out.println(result);
+    }
+
+    public static void polindrom() {
+//    294. Дано два чотирицифрових числа a і b. Виведіть усі чотирицифрові числа на відрізку від a до b,
+//    які є паліндромами (читаються однаково як зліва направо, так і справа наліво).
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter 4 digits number");
+
+        int a = scn.nextInt();
+
+        System.out.println("Enter 4 digits number");
+
+        int b = scn.nextInt();
+
+
+
+       for (int i = a; i <= b; i++) {
+           int lastDigitOfCurrentNumber = a % 10;
+           int firstDigitOfCurrentNumber = a / 1000;
+           int secondDigitFromTheEndOfCurrentNumb = (a / 10) % 10;
+           int secondDigitOfCurrentNumber = (a / 100) % 10;
+
+           if (lastDigitOfCurrentNumber == firstDigitOfCurrentNumber) {
+
+           }
+        }
+
         }
     }
-    LinkedList<Integer> e = new LinkedList<>();
-    int div1 = 2;
-    while (b > 1){
-        //  System.out.println("..." + div);
-        if (b % div1 == 0){
-            b = b / div1;
-          //  System.out.println(div1 + " " + b);
-            e.add(div1);
-        }
-        else{
-            div1 += 1;
-        }
     }
-   // d.toArray();
-
-
-}
-}

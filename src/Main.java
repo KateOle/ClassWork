@@ -48,7 +48,9 @@ public class Main {
        // LoopFor.steps();
        // LoopFor.stepsFor();
        // LoopFor.isAutomorfnNumber();
-        LoopFor.oddNaturalNumer();
+      //  LoopFor.oddNaturalNumer();
+       // LoopFor.algorithmEuclida1();
+        LoopFor.numberOfDigitFromTheEnd();
 
 //        int[][] matric = new int[3][3];
 //
