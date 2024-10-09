@@ -430,12 +430,7 @@ public class LoopFor {
             } if (!fi) {
                 System.out.println(i);
             }
-
         }
-
-
     }
-
-
 }
 
