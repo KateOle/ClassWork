@@ -402,7 +402,6 @@ public class LoopFor {
     }
 
 
-
     public static void rowOfCards() {
         //    296. Для настільної гри використовуються картки з номерами від 1 до n. Одна картка загубилася. Знайдіть її,
 //    знаючи номери решти карток. Користувач вводить ціле число n, далі n-1 номери решти карток
@@ -414,21 +413,91 @@ public class LoopFor {
 
         int a = scn.nextInt();
 
-        int [] numbers = new int[a];
+        int[] numbers = new int[a];
 
 
-        for (int i = 0; i < numbers.length - 1; i++){
-                  numbers[i] = scn.nextInt();
+        for (int i = 0; i < numbers.length - 1; i++) {
+            numbers[i] = scn.nextInt();
         }
 
         for (int i = 1; i <= a; i++) {
             boolean fi = false;
             for (int j = 0; j < numbers.length; j++) {
-                if(i == numbers[j]) {
-                   fi = true;
+                if (i == numbers[j]) {
+                    fi = true;
                 }
-            } if (!fi) {
+            }
+            if (!fi) {
                 System.out.println(i);
+            }
+        }
+    }
+
+
+    public static void division() {
+//   297.  Оленка вчиться ділити з залишком. Вона взяла деяке число, розділила його на 2 і відкинула залишок.
+//        Те, що вийшло, розділила на 3 та знову відкинула залишок. Отримане число вона розділила на 4, відкинула
+//    залишок і отримала число k. Яке число могла вибрати Оленка спочатку? Вводиться натуральне число k,
+//    що не перевершує 1000. Необхідно вивести усі можливі числа, які могла б вибрати спочатку Оленка,
+//    за зростанням, розділяючи їх пропусками.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter a number less than 1000");
+
+        int k = scn.nextInt();
+
+        int res = 0;
+        for (int i = 0; i <= 23; i++) {
+            res = 24 * k + i;
+            System.out.println(res + " ");
+        }
+    }
+
+    public static void amountOfNumbers() {
+//    298. Скільки всього натуральних чисел складаються з не менш ніж a цифр і не більше, ніж b цифр?
+//    Вводяться два довільних натуральних числа a і b в окремих рядках. Виведіть одне число: кількість чисел,
+//    що володіють зазначеними властивостями.
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter a number a");
+
+        int a = scn.nextInt();
+
+        System.out.println("Enter a number b");
+
+        int b = scn.nextInt();
+
+        int powA = (int) Math.pow(10, a - 1) - 1;
+        int powB = (int) Math.pow(10, b) - 1;
+
+        System.out.println(powB - powA);
+    }
+
+    public static void devideToEveryDigit() {
+//   299. Дано натуральне число n (n ≤ 1000). Скласти програму для перевірки чи ділиться ціле число на кожну з його
+//    цифр без залишку. Надрукувати такі числа в інтервалі від 10 до n в порядку зростання, через пропуск.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter a number n");
+
+        int n = scn.nextInt();
+
+
+        int res = 0;
+        for (int i = 0; i < n; i++) {
+            if (n >= 100) {
+                int a1 = n % 10;
+                int a2 = (n / 10) % 10;
+                int a3 = n / 100;
+                if (n % a1 == 0 & n % a2 == 0 & n % a3 == 0 & a1 != 0 & a2 !=0 & a3 !=0)
+                    System.out.println(n);
+            } else if (n >= 10) {
+                int a1 = n % 10;
+                int a2 = n / 10;
+                if (n % a1 == 0 & n % a2 == 0 & a1 != 0 & a2 !=0)
+                    System.out.println(n);
             }
         }
     }

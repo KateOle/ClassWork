@@ -52,7 +52,10 @@ public class Main {
        // LoopFor.algorithmEuclida1();
        // LoopFor.numberOfDigitFromTheEnd();
       //  LoopFor.polindrom();
-        LoopFor.rowOfCards();
+      //  LoopFor.rowOfCards();
+   //LoopFor.division();
+      //  LoopFor.amountOfNumbers();
+        LoopFor.devideToEveryDigit();
 
 //        int[][] matric = new int[3][3];
 //
