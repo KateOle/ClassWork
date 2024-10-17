@@ -491,14 +491,34 @@ public class LoopFor {
                 int a1 = n % 10;
                 int a2 = (n / 10) % 10;
                 int a3 = n / 100;
-                if (n % a1 == 0 & n % a2 == 0 & n % a3 == 0 & a1 != 0 & a2 !=0 & a3 !=0)
+                if (n % a1 == 0 & n % a2 == 0 & n % a3 == 0 & a1 != 0 & a2 != 0 & a3 != 0)
                     System.out.println(n);
             } else if (n >= 10) {
                 int a1 = n % 10;
                 int a2 = n / 10;
-                if (n % a1 == 0 & n % a2 == 0 & a1 != 0 & a2 !=0)
+                if (n % a1 == 0 & n % a2 == 0 & a1 != 0 & a2 != 0)
                     System.out.println(n);
             }
+        }
+    }
+
+    public static void money() {
+//   300. В одній країні використовуються грошові купюри номіналом в 1, 2, 4, 8, 16, 32 і 64. Дано натуральне число n.
+//    Якою найменшою кількістю таких грошових знаків можна виплатити суму n (вказати кількість кожної з
+//            використовуваних для виплати купюр)? Передбачається, що є досить велика кількість купюр всіх номіналів.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter amount of money");
+
+        int n = scn.nextInt();
+
+        int[] m = new int[7];
+
+        for (int i = 6; i >= 0; i--) {
+            m[i] = n / (int) Math.pow(2, i);
+            n = n % (int) Math.pow(2, i);
+            System.out.println( (int) Math.pow(2, i) + " - " + m[i]);
         }
     }
 }

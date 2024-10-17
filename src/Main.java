@@ -55,7 +55,8 @@ public class Main {
       //  LoopFor.rowOfCards();
    //LoopFor.division();
       //  LoopFor.amountOfNumbers();
-        LoopFor.devideToEveryDigit();
+      //  LoopFor.devideToEveryDigit();
+        LoopFor.money();
 
 //        int[][] matric = new int[3][3];
 //
