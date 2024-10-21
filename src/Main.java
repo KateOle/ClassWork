@@ -5,6 +5,7 @@ import arraysTopics.ArraysString;
 import dataType.NumericTypes;
 import ifTopics.*;
 import loopsTopics.LoopFor;
+import stringsTopic.Strings;
 
 public class Main {
 
@@ -56,7 +57,11 @@ public class Main {
    //LoopFor.division();
       //  LoopFor.amountOfNumbers();
       //  LoopFor.devideToEveryDigit();
-        LoopFor.money();
+      //  LoopFor.money();
+      //  LoopFor.findTwoNumbersifKnownSumAndMultiple();
+      // LoopFor.intervalOddNumbers();
+      //  LoopFor.intervalOfEvenNumbers();
+        Strings.stringUpperLowerCases();
 
 //        int[][] matric = new int[3][3];
 //

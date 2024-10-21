@@ -518,7 +518,112 @@ public class LoopFor {
         for (int i = 6; i >= 0; i--) {
             m[i] = n / (int) Math.pow(2, i);
             n = n % (int) Math.pow(2, i);
-            System.out.println( (int) Math.pow(2, i) + " - " + m[i]);
+            System.out.println((int) Math.pow(2, i) + " - " + m[i]);
+        }
+    }
+
+    public static void findTwoNumbersifKnownSumAndMultiple() {
+        // 301. Задумали два натуральних числа x і y (x, y ≤ 1000). Щоб відгадати ці числа, називають суму цих
+// чисел a і їх добуток b. Відгадайте ці числа і виведіть їх в порядку зростання, розділяючи пропуском.
+
+        boolean flag = true;
+
+        while (flag) {
+            Scanner scn = new Scanner(System.in);
+
+            System.out.println("Enter Sum of numbers in mind (every number less then 1001)");
+
+            int a = scn.nextInt();
+
+            System.out.println("Enter Multiple of numbers in mind (every number less then 1001)");
+
+            int b = scn.nextInt();
+
+            int d = 0;
+            int x = 0;
+            int y = 0;
+
+            // x + y = a; x*y = b
+            //x = a - y
+            // (a - y)*y = b
+            // a*y - y*y - b = 0
+            //-y*y + a*y -b = 0 |(*-1)
+            //y*y -a*y + b = 0
+
+            d = (int) Math.pow(a, 2) - 4 * b;
+            y = (a + (int) Math.sqrt(d)) / 2;
+            x = (a - (int) Math.sqrt(d)) / 2;
+
+            if (x > 1000 || y > 1000) {
+                System.out.println(" Numbers in mind more then 1000, enter smaller numbers ");
+
+            } else {
+                System.out.println(y + " " + x);
+                flag = false;
+            }
+        }
+    }
+
+    public static void intervalOddNumbers() {
+//   302 Надрукувати всі непарні числа з інтервалу [a, b] (a ≥ b). Розглянути варіант програми без використання
+//    інструкції розгалуження.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println(" Enter beginning of interval ");
+
+        int a = scn.nextInt();
+
+        System.out.println(" Enter end of interval ");
+
+        int b = scn.nextInt();
+
+        for (int i = a - (1 - a % 2); i >= b; i = i - 2) {   // i-=2
+            System.out.println(i);
+        }
+    }
+
+    public static void intervalOddNumbers1() {
+//   302 Надрукувати всі непарні числа з інтервалу [a, b] (a ≥ b). Розглянути варіант програми без використання
+//    інструкції розгалуження.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println(" Enter beginning of interval ");
+
+        int a = scn.nextInt();
+
+        System.out.println(" Enter end of interval ");
+
+        int b = scn.nextInt();
+
+        // more optimal to make bigger steps in cycle than check every step (now checks every second step)
+        if (a % 2 == 0)
+            a -= 1;
+        for (int i = a; i >= b; i = i - 2) {   // i-=2
+            System.out.println(i);
+        }
+    }
+
+    public static void intervalOfEvenNumbers() {
+//    302 Надрукувати всі парні числа з інтервалу [a, b] (a ≤ b). Розглянути варіант програми без використання
+//    інструкції розгалуження.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println(" Enter beginning of interval ");
+
+        int a = scn.nextInt();
+
+        System.out.println( " Enter end of interval ");
+
+        int b = scn.nextInt();
+
+        if (a % 2 != 0)
+            a = a + 1;
+
+        for (int i = a; i <=b ; i += 2) {
+            System.out.print(i + " ");
         }
     }
 }
