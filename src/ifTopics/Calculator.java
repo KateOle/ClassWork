@@ -1,15 +1,45 @@
 package ifTopics;
 
+import java.text.MessageFormat;
 import java.time.LocalDate;
 import java.util.Scanner;
 import java.util.SortedMap;
 
 public class Calculator {
 
+    public static void squareEquationRoots() {
+        // 3. рассчитать корни квадратного уровнения
+
+        Scanner n = new Scanner(System.in);
+
+        System.out.println("Input a");
+        double a = n.nextDouble();
+        System.out.println("Input b");
+        double b = n.nextDouble();
+        System.out.println("Input c");
+        double c = n.nextDouble();
+
+        double d = b * b - 4 * a * c;
+
+        if (d > 0) {
+            double x1 = (-b + Math.sqrt(d)) / (2 * a);
+            double x2 = (-b - Math.sqrt(d)) / (2 * a);
+
+            System.out.println(MessageFormat.format("Korni x1 = {0}, x2 = {1}", x1, x2));
+
+            //  System.out.println("Korni " + x1 + " i " + x2);
+        } else if (d == 0) {
+            double x3 = (-b) / (2 * a);
+            System.out.println("Koren " + x3);
+        } else {
+            System.out.println("Kornej net");
+        }
+    }
+
     public static double calculator(double number1, double number2, char sign) {
-//
-//        //  Калькулятор математичний. Користувач вводить два числа і знак між ними. Виводимо на екран результат.
-//
+        //  Калькулятор математичний. Користувач вводить два числа і знак між ними. Виводимо на екран
+        //  результат.
+
         if (sign == '+') {
             return number1 + number2;
         } else if (sign == '-') {
@@ -20,6 +50,7 @@ public class Calculator {
             return number1 / number2;
         } else
             return Double.NaN;
+
     }
 
     public static void calculationResult(double a) {
@@ -260,12 +291,11 @@ public class Calculator {
                 break;
             case 2:
                 day = day + 1;
-                if ( day > 28 && year%4 != 0 ) {
+                if (day > 28 && year % 4 != 0) {
                     day = 1;
                     month = month + 1;
                 }
-                if (year % 4 == 0 && day == 28)
-                {
+                if (year % 4 == 0 && day == 28) {
                     day = day + 1;
                 }
                 System.out.println(day + "." + month + "." + year);
@@ -359,28 +389,28 @@ public class Calculator {
 //    183. Напишіть програму, у якій користувач вводить значення поточної дати: день, місяць і рік (цілі числа), а програма
 //    виводить вчорашню дату у форматі: дд.мм.рррр.
 
-    Scanner scnDay = new Scanner(System.in);
-    Scanner scnMonth = new Scanner(System.in);
-    Scanner scnYear = new Scanner(System.in);
+        Scanner scnDay = new Scanner(System.in);
+        Scanner scnMonth = new Scanner(System.in);
+        Scanner scnYear = new Scanner(System.in);
 
         System.out.println("Enter a day ");
 
-    int day = scnDay.nextInt();
+        int day = scnDay.nextInt();
 
         System.out.println("Enter a month ");
 
-    int month = scnMonth.nextInt();
+        int month = scnMonth.nextInt();
 
         System.out.println("Enter a year ");
 
-    int year = scnYear.nextInt();
+        int year = scnYear.nextInt();
 
         LocalDate currentDate = LocalDate.of(year, month, day);
 
-       LocalDate prevDate = currentDate.minusDays(1);
+        LocalDate prevDate = currentDate.minusDays(1);
 
         System.out.println(" Previous date is " + prevDate);
     }
 
 
-   }
+}
