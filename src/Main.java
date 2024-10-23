@@ -61,7 +61,8 @@ public class Main {
       //  LoopFor.findTwoNumbersifKnownSumAndMultiple();
       // LoopFor.intervalOddNumbers();
       //  LoopFor.intervalOfEvenNumbers();
-        Strings.stringUpperLowerCases();
+       // Strings.stringUpperLowerCases();
+   //     System.out.println(args[0]);
 
 
 // 4 partii - 0, 1, 2, 3. 1000 people in every parties. 20% of people move to the party there speaker tells.
