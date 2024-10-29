@@ -6,8 +6,7 @@ import java.util.Scanner;
 public class Strings {
 
     public static void main(String[] args) {
-      //  reduceNumber();
-        isFirstLetterTheSameAsLastLetter();
+       replaceOfWords();
 
     }
 
@@ -170,9 +169,28 @@ public class Strings {
         int n = scn.nextInt();
 
         for (int i = 0; i < number.length; i++) {
-            if(number[i] == n) continue;
+            if (number[i] == n) continue;
             System.out.print(number[i] + " ");
         }
+    }
+
+    public static void reduceNumber1() {
+//   318. Дано натуральне число. Знайти число, що отримується видаленням з вхідного усіх зазначених цифр.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter long number");
+
+        String n = scn.nextLine();
+
+        System.out.println("Enter a digit from the number");
+
+        String d = scn.nextLine();
+
+        String newString = n.replace(d, "");
+
+        System.out.println(newString);
+
     }
 
     public static void isFirstLetterTheSameAsLastLetter() {
@@ -208,6 +226,49 @@ public class Strings {
 //   316. Дано натуральне число. Знайти число, що отримується з вхідного перестановкою його першої та останньої цифр.
 //    Врахувати випадок введення одноцифрового числа.
 
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter some number");
+
+        int n = scn.nextInt();
+
+        if (n < 10) {
+            System.out.println(n);
+            return;
+        }
+
+        String stringN = Integer.toString(n);
+
+        String resultString = stringN.charAt(stringN.length() - 1) + stringN.substring(1, stringN.length() - 1) + stringN.charAt(0);
+
+        System.out.println(resultString);
+    }
+
+    public static void removeDigitsFromTheString() {
+//   328. Користувач вводить рядок, у якому чергуються цифри та інші символи. На початку і у кінці рядка цифри відсутні.
+//    Напишіть програму, яка друкує усі символи введеного рядка у тому ж порядку, але без цифр.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter some string");
+
+        String initialString = scn.nextLine();
+
+        for (int i = 0; i < 10; i++) {
+            initialString = initialString.replace("" + i, "");
+        }
+        System.out.println(initialString);
+
+    }
+
+    public static void replaceOfWords() {
+//   329. Напишіть програму, щоб у введеному користувачем рядку виконати обмін місцями першого та останнього символів.
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter some phrase");
+
+        String phrase = scn.nextLine();
 
 
     }
