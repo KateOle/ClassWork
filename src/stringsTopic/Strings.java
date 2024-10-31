@@ -1,12 +1,13 @@
 package stringsTopic;
 
+import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Strings {
 
     public static void main(String[] args) {
-       replaceOfWords();
+       lastWordInSentence();
 
     }
 
@@ -270,9 +271,99 @@ public class Strings {
 
         String phrase = scn.nextLine();
 
+        String[] reverseWords = phrase.split(" ");
+
+        String temp = reverseWords[0];
+        reverseWords[0] = reverseWords[reverseWords.length - 1];
+        reverseWords[reverseWords.length - 1] = temp;
+
+        for (int i = 0; i < reverseWords.length; i++) {
+            System.out.print(reverseWords[i] + " ");
+        }
+    }
+
+    public static void changeRegister() {
+//   330. Напишіть програму, яка змінює регістр введеного єдиного символу, тобто переводить великі літери у малі,
+//    а малі - у великі, інші символи не змінює.
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter some character");
+
+        char character = scn.next().charAt(0);
+
+        if (Character.isUpperCase(character)) {
+            char lowerCharacter = Character.toLowerCase(character);
+            System.out.println(lowerCharacter);
+        } else if (Character.isLowerCase(character)) {
+            char upperCharacter = Character.toUpperCase(character);
+            System.out.println(upperCharacter);
+        } else {
+            System.out.println(character);
+        }
+    }
+
+    public static void sumOfStringNumber() {
+//    331. Вводиться додатне ціле трицифрове число. Знайти суму цифр числа. Операціями ділення націло і остача
+//    від ділення користуватися не можна.
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter some number");
+
+        String number = scn.nextLine();
+
+        int count = 0;
+        for (int i = 0; i < number.length(); i++) {
+            int digit = Character.getNumericValue(number.charAt(i));
+            count += digit;
+        }
+        System.out.println(count);
+    }
+
+    public static void firstWordInSentence() {
+//   332. Напишіть програму, яка виводить перше слово у рядку. Слово - це послідовність непробільних символів,
+//    обмежена пропусками або межами рядка. Вхідний рядок містить довільну послідовність символів.
+//    Програма повинна вивести перше слово цього рядка.
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter some sentence");
+
+        String sent = scn.nextLine();
+
+        String[] arrayOfWords = sent.split(" ");
+
+        System.out.println(arrayOfWords[0]);
 
     }
-}
+
+    public static void lastWordInSentence() {
+//  333.  Напишіть програму, яка виводить останнє слово у рядку. Слово – це послідовність непробільних символів,
+//    обмежена пропусками або межами рядка. Вхідний рядок містить довільну послідовність символів.
+//    Програма повинна вивести останнє слово цього рядка.
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter some sentence");
+
+        String sent = scn.nextLine();
+
+        String[] arrayOfWords = sent.split(" ");
+
+        System.out.println(arrayOfWords[arrayOfWords.length-1]);
+    }
+
+    public static void penguins() {
+//   334. Напишіть програму, яка по введеному числу n від 1 до 9 виводить на екран n пінгвінів з відповідним номером -
+//    число від 1 до n. Зображення одного пінгвіна має розмір 5 x 9 символів, між двома сусідніми пінгвінами
+//    також є порожній (з пропусків) стовпець. Дозволяється вивести порожній стовпець після останнього пінгвіна.
+//    Для спрощення малювання скопіюйте пінгвіна із вихідних даних. Врахуйте, що виведення на екран виконується
+//    порядково, а не «попінгвінно».
+
+//                 _~_        _~_        _~_        _~_
+//                (o o)      (o o)      (o o)      (o o)
+//               /  V  \    /  V  \    /  V  \    /  V  \
+//              /(  1  )\  /(  2  )\  /(  3  )\  /(  4  )\
+//                ^^ ^^      ^^ ^^      ^^ ^^      ^^ ^^
 
 
+    }
+ }
 
