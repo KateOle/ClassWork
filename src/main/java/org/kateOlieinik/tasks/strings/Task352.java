@@ -7,7 +7,7 @@ public class Task352 {
 //    У випадку, якщо введений символ є літерою, великі і малі букви розрізняються.
 
     public static void main(String[] args) {
-
+        calculationOfLetters1();
     }
 
     public static void calculationOfLetters() {
@@ -20,10 +20,42 @@ public class Task352 {
 
         System.out.println("Enter any letter ");
 
-        String character = scn.nextLine();
+        String character = scn.nextLine().toLowerCase();
 
-        String splitedSent = character
+        String replacedCharacter = sentence.replace(character.toUpperCase(), character.toLowerCase());
+
+        String[] splitedSent = replacedCharacter.split(character);
+
+        int count = splitedSent.length;
+
+        if (replacedCharacter.charAt(replacedCharacter.length()-1) == character.charAt(0)) {
+               count = count + 1;
+        }
+        System.out.println("In this sentence " + (count-1) + " letters " + character);
     }
 
+    public static void calculationOfLetters1() {
 
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Enter a sentence ");
+
+        String sentence = scn.nextLine().toLowerCase();
+
+        System.out.println("Enter any letter ");
+
+        Character character = scn.next().toLowerCase().charAt(0);
+
+        int count = 0;
+        int calculOfCharacter = 0;
+
+        for (int i = 0; i < sentence.length(); i++) {
+            count  = sentence.charAt(i);
+            if (count == (int)character) {
+                calculOfCharacter += 1;
+            }
+        }
+        System.out.println("In this sentence " + calculOfCharacter + " " + character);
+
+    }
 }
