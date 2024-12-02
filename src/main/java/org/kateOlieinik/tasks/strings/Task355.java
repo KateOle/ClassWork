@@ -28,5 +28,4 @@ public class Task355 {
 
         System.out.println(res);
     }
-
 }
