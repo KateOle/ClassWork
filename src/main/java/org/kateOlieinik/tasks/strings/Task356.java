@@ -22,9 +22,11 @@ public class Task356 {
         int nMinusOne = (n - 1);
 
         String result = String.format("%d*%d", 1, 2);
+
         int res = 2;
         for (int i = 3; i <= n; i++) {
             res = res + (i-1)*i;
+
            result += String.format(" + %d*%d", i-1, i);
         }
        System.out.println(result + " = " + res);
