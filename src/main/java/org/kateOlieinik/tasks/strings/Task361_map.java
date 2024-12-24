@@ -2,7 +2,7 @@ package org.kateOlieinik.tasks.strings;
 
 import java.util.*;
 
-public class Task361 {
+public class Task361_map {
 
 
     public static void main(String[] args) {
