@@ -19,6 +19,7 @@ public class Task_368 {
 
     public static void indexOfSomeCharacter() {
 
+        // Принимаем от юзера данные
         Scanner scn = new Scanner(System.in);
 
         System.out.println("Enter some sentence ");
@@ -29,6 +30,7 @@ public class Task_368 {
 
         Character numb = scn.next().charAt(0);
 
+        // расчет первого совпадающего символа
         int charStart = -1;
         int charEnd = -1;
         for (int i = 0; i < sent.length(); i++) {
@@ -38,12 +40,15 @@ public class Task_368 {
             }
         }
 
+        // расчет последнего совпадающего символа
         for (int i = sent.length()-1; i > -1; i--) {
             if (sent.charAt(i) == numb) {
                 charEnd = i;
                 break;
             }
         }
+
+        // Вывод результатов с обработкой исключений
         if (charStart == -1 || charEnd == -1) {
             System.out.println("Missing");
         }else if(charStart == charEnd) {

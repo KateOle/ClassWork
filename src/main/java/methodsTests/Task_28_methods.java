@@ -1,4 +1,4 @@
-package org.kateOlieinik.tasks.strings;
+package methodsTests;
 
 import java.util.Scanner;
 

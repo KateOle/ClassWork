@@ -1,4 +1,4 @@
-package org.kateOlieinik.tasks.strings;
+package methodsTests;
 
 import java.util.Scanner;
 
@@ -32,10 +32,7 @@ public class task_312_methods_strings {
                 return i+1;
             }
         }
-
-
         return 0;
-
     }
 
 
