@@ -9,22 +9,28 @@ public class Task_360_methods {
 //    є паліндромом, або No у протилежному випадку.
 
         public static void main(String[] args) {
-            isPolindrom();
+            printPalindrome();
         }
 
-        public static void printPolindrom(){
+        public static void printPalindrome(){
             Scanner scn = new Scanner(System.in);
 
             System.out.println("Enter some sentence ");
 
             String pol = scn.nextLine();
 
+            boolean result = isPalindrome(pol);
+
+            if(result){
+                System.out.println("yes");
+            } else System.out.println("no");
+
         }
 
-        public static boolean isPolindrom(String polendrom) {
+        public static boolean isPalindrome(String palindrome) {
 
 
-            String polindrWithoutSpaces = polendrom.toLowerCase().replace(" ", "");
+            String polindrWithoutSpaces = palindrome.toLowerCase().replace(" ", "");
 
             StringBuilder reversedPolindromStringBuilder = new StringBuilder(polindrWithoutSpaces).reverse();
 
@@ -32,8 +38,6 @@ public class Task_360_methods {
 
             String reversedPolindromString = reversedPolindromStringBuilder.toString();
 
-            if (reversedPolindromString.equals(polindrWithoutSpaces)) {
-                System.out.println("yes");
-            } else System.out.println("No");
+            return reversedPolindromString.equals(polindrWithoutSpaces);
         }
     }
