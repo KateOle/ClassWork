@@ -1,4 +1,4 @@
-package methodsTests;
+package org.methodsTests;
 
 import java.util.Scanner;
 
@@ -178,7 +178,6 @@ public class Task_377_methods_tests {
             System.out.println("Check if sentence contains less than 3 lower letter in the sentence - no changes in the sentence");
         }
 
-
     }
 
     public static void reverseLatters() {
@@ -218,8 +217,7 @@ public class Task_377_methods_tests {
                 }
             }
         }
-
-
+        
         letter = (char) ((letter - 97) + 65);
         for (int i = sentence.length() - 1; i > -1; i--) {
             if (sentence.charAt(i) == letter) {

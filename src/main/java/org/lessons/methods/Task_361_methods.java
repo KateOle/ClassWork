@@ -1,4 +1,4 @@
-package methodsTests;
+package org.lessons.methods;
 
 import java.util.HashMap;
 import java.util.Map;

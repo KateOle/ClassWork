@@ -1,5 +1,7 @@
-package methodsTests;
+package org.lessons.methods;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Task_28_methods {
@@ -10,7 +12,7 @@ public class Task_28_methods {
         numberFromUser();
     }
 
-    public static void numberFromUser(){
+    public static void numberFromUser() {
         Scanner scn = new Scanner(System.in);
 
         System.out.println("Enter some number");
@@ -23,6 +25,7 @@ public class Task_28_methods {
     public static int sumOfDigits(int a) {
 
         int result = a * 1234;
-       return result;
+        return result;
     }
+
 }
