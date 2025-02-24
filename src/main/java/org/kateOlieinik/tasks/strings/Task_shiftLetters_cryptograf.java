@@ -2,7 +2,7 @@ package org.kateOlieinik.tasks.strings;
 
 import java.util.Scanner;
 
-public class Task {
+public class Task_shiftLetters_cryptograf {
 
 //    дано текст, зсунути його по методу цицерона
 //    abc - bcd
@@ -38,8 +38,6 @@ public class Task {
         }
 
         System.out.println(collect);
-
-
 
     }
 
