@@ -138,17 +138,17 @@ public class Task_377_methods_tests {
             System.out.println("Check that user enters space");
         }
 
-        // Check that user enters Upper letter which presents in the sentence  - no changes in the sentence
-        String result13 = changeLettersFromSecondToUpperCase('N', "Therne shounld be one-- aNd preferably oNly oNe --obNvious way to do it.");
+        // Check that if a user enters a letter in uppercase, it doesn't affect the task result (it will work as expected)
+        String result13 = changeLettersFromSecondToUpperCase('N', "There should be one-- and preferably only one --obvious way to do it.");
         System.out.print("Testcase 13: ");
-        if (result13.equals("Therne shounld be one-- aNd preferably oNly oNe --obNvious way to do it."))
+        if (result13.equals("There should be one-- aNd preferably oNly one --obvious way to do it."))
             System.out.println("Ok");
         else {
             System.out.println("False");
             System.out.println("Check that user enters Upper letter which presents in the sentence");
         }
 
-        // Check if sentence contains more than 3 Upper letter and more than 3 lower letter which user enters - ignore Upper letter and proceed lower letter
+        // Check if sentence contains more than 3 Upper letter and more than 3 lower letter which user enters - ignore Upper letter and process lower letter
         String result14 = changeLettersFromSecondToUpperCase('n', "Therne shounld be one-- aNd preferably oNly one --obNvious way to do it.");
         System.out.print("Testcase 14: ");
         if (result14.equals("Therne shouNld be oNe-- aNd preferably oNly one --obNvious way to do it."))
@@ -168,6 +168,16 @@ public class Task_377_methods_tests {
             System.out.println("Check if sentence contains less than 3 Upper letter and more than 3 lower letter which user enters");
         }
 
+        // Check if sentence contains less than 3 lower letter in the sentence - no changes in the sentence
+        String result16 = changeLettersFromSecondToUpperCase('n', "There should be one-- and preferably oly oe --obvious way to do it.");
+        System.out.print("Testcase 16: ");
+        if (result16.equals("There should be one-- and preferably oly oe --obvious way to do it."))
+            System.out.println("Ok");
+        else {
+            System.out.println("False");
+            System.out.println("Check if sentence contains less than 3 lower letter in the sentence - no changes in the sentence");
+        }
+
 
     }
 
@@ -179,9 +189,11 @@ public class Task_377_methods_tests {
 
         String sent = scn.nextLine();
 
-        System.out.println("Enter some latter");
+        System.out.println("Enter some letter");
 
-        Character l = scn.next().charAt(0);
+        char l = scn.next().charAt(0);
+
+        //   l = Character.toLowerCase(l);  // then I reverted Upper letter to lower letter here, the tests don't see it
 
         System.out.println(changeLettersFromSecondToUpperCase(l, sent));
     }
@@ -191,50 +203,32 @@ public class Task_377_methods_tests {
         int count = 0;
         Character firstLat = ' ';
         Character uppCase = ' ';
+        letter = Character.toLowerCase(letter);   // revert Upper letter, entered by user, to lower letter
+        boolean isLetter = Character.isLetter(letter); // Add boolean if it is true = letter entered, if it is false, not letter entered
 
-        for (int i = 0; i < sentence.length(); i++) {
-            if (sentence.charAt(i) == letter) {
-                count = count + 1;
-                if (count == 1) {
-                    continue;
-                } else
-                    uppCase = (char) (65 + (sentence.charAt(i) - 97));
-                sentence = sentence.substring(0, i) + uppCase + sentence.substring(i + 1);
+        if (isLetter) {
+            for (int i = 0; i < sentence.length(); i++) {
+                if (sentence.charAt(i) == letter) {  // add isLetter to the condition
+                    count = count + 1;
+                    if (count == 1) {
+                        continue;
+                    } else
+                        uppCase = (char) (65 + (sentence.charAt(i) - 97));
+                    sentence = sentence.substring(0, i) + uppCase + sentence.substring(i + 1);
+                }
             }
         }
 
+
         letter = (char) ((letter - 97) + 65);
-        //  count = 0;
         for (int i = sentence.length() - 1; i > -1; i--) {
             if (sentence.charAt(i) == letter) {
-                // count = count + 1;
-                //  if (count == 1) {
                 uppCase = (char) (97 + (sentence.charAt(i) - 65));
                 sentence = sentence.substring(0, i) + uppCase + sentence.substring(i + 1);
                 break;
-                //  }
             }
         }
 
         return sentence;
     }
-
-//    public static String chageLastLetterToLowerCase(char lastLetter, String sentence) {
-//        int count = 0;
-//        Character uppCase;
-//        lastLetter = (char) ((lastLetter - 97) + 65);
-//        for (int i = sentence.length() - 1; i > -1; i--) {
-//            if (sentence.charAt(i) == lastLetter) {
-//                count = count + 1;
-//                if (count == 1) {
-//                    uppCase = (char) (97 + (sentence.charAt(i) - 65));
-//                    sentence = sentence.substring(0, i) + uppCase + sentence.substring(i + 1);
-//                    break;
-//                }
-//            }
-//        }
-//       // System.out.println(sentence);
-//       return sentence;
-//
-//}
 }
