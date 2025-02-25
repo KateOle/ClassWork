@@ -204,29 +204,39 @@ public class Task_377_methods_tests {
         Character uppCase = ' ';
         letter = Character.toLowerCase(letter);   // revert Upper letter, entered by user, to lower letter
         boolean isLetter = Character.isLetter(letter); // Add boolean if it is true = letter entered, if it is false, not letter entered
+        int indexLastLetter = 0;
 
-        if (isLetter) {
-            for (int i = 0; i < sentence.length(); i++) {
-                if (sentence.charAt(i) == letter) {  // add isLetter to the condition
-                    count = count + 1;
-                    if (count == 1) {
-                        continue;
-                    } else
-                        uppCase = (char) (65 + (sentence.charAt(i) - 97));
-                    sentence = sentence.substring(0, i) + uppCase + sentence.substring(i + 1);
+        if (sentence != "") {
+            if (isLetter) {
+
+                for (int i = 0; i < sentence.length(); i++) {
+                    if (sentence.charAt(i) == letter) {
+                        if (sentence.charAt(i) > 96 && sentence.charAt(i) < 123) {
+                            count = count + 1;
+                            indexLastLetter = i;
+                            if (count == 1) {
+                                continue;
+                            } else
+                                uppCase = (char) (65 + (sentence.charAt(i) - 97));
+                            sentence = sentence.substring(0, i) + uppCase + sentence.substring(i + 1);
+                        }
+                    }
+
                 }
             }
-        }
-        
-        letter = (char) ((letter - 97) + 65);
-        for (int i = sentence.length() - 1; i > -1; i--) {
-            if (sentence.charAt(i) == letter) {
-                uppCase = (char) (97 + (sentence.charAt(i) - 65));
-                sentence = sentence.substring(0, i) + uppCase + sentence.substring(i + 1);
-                break;
-            }
-        }
 
-        return sentence;
-    }
+
+            letter = (char) ((letter - 97) + 65);
+
+            if (sentence.charAt(indexLastLetter) == letter) {
+                uppCase = (char) (97 + (sentence.charAt(indexLastLetter) - 65));
+                sentence = sentence.substring(0, indexLastLetter) + uppCase + sentence.substring(indexLastLetter + 1);
+
+            } else if (sentence.charAt(0) == letter) {
+
+            }
+            }
+
+            return sentence;
+        }
 }
