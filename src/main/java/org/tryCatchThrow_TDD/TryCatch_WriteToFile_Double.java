@@ -1,4 +1,4 @@
-package org.methodsTests;
+package org.tryCatchThrow_TDD;
 
 import java.io.File;
 import java.io.FileNotFoundException;

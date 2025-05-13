@@ -1,4 +1,4 @@
-package org.methodsTests;
+package org.tryCatchThrow_TDD;
 
 import java.util.Scanner;
 
