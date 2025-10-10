@@ -34,6 +34,8 @@ public class CoordinatesTest {
     //6 - Negative test Brocken structureContinuing enter after Treasure! -> Treasure!\nSouth 4 -> BrokenStructureException
     //7 - No enter after word [digit] -> West 6West 5\nTreasure! -> BrokenStructureException
     //8 - No \n after side of world -> Down 4 \nTrea! -> BrokenStructureException
+    //9 - Other word then Treasure at the end -> South 6\nWest 3\nStop!
+    //10 - Misspelling in the word -> South 6\nWest 3\nTreasur!
 
     //9 - Treasure without ! at the end -> South 6\nWest 3\nTreasure-> BrokenStructureOfRowException
     //10 - Empty side of world: North 3\n 5\nEast 3\nTreasure! -> BrokenStructureOfRowException
@@ -41,12 +43,9 @@ public class CoordinatesTest {
     //12 - No Space between word and digit -> West4\nTreasure! -> BrokenStructureOfRowException
     //13 - No Space between word and digit -> East-4\nTreasure! -> BrokenStructureOfRowException
     //14 - No digit -> South 6\nWest \nTreasure! ->BrokenStructureOfRowException
-
-    //15 - Other word then Treasure at the end -> South 6\nWest 3\nStop! -> BrokenContentException
-    //16 - Misspelling in the word -> South 6\nWest 3\nTreasur! -> BrokenContentException
-    //17 - Incorrect word [side of word] -> South 6\nTest 3\nTreasure!-> BrokenContentException
-    //18 - Float digit -> South 6.3\nWest 3\nTreasure! -> BrokenContentException
-    //19 - Negative digit -> //West -5\nTreasure! -> BrokenContentException
+    //15 - Incorrect word [side of word] -> South 6\nTest 3\nTreasure!
+    //16 - Float digit -> South 6.3\nWest 3\nTreasure!
+    //17 - Negative digit -> //West -5\nTreasure!
 
     @TestFactory
     public List<DynamicTest> coordinateTestPositive() {
@@ -93,12 +92,6 @@ public class CoordinatesTest {
                 dynamicTest("Negative test Brocken structure",
                         () -> assertThrows(BrokenStructureException.class,
                                 () -> coordinate("Up 10"))),
-//                dynamicTest("Negative test Brocken structure",
-//                        () -> assertThrows(BrokenStructureException.class,
-//                                () -> coordinate("\nNorth 3\nTreasure!"))),
-//                dynamicTest("Negative test Brocken structure",
-//                        () -> assertThrows(BrokenStructureException.class,
-//                                () -> coordinate("Treasure!\nTreasure!"))),
                 dynamicTest("Negative test Brocken structure",
                         () -> assertThrows(BrokenStructureException.class,
                                 () -> coordinate("Treasure!\nSouth 4"))),
@@ -108,21 +101,12 @@ public class CoordinatesTest {
                 dynamicTest("Incorrect structure of Content",
                         ()-> assertThrows(BrokenStructureException.class,
                                 ()-> coordinate("South 6\nWest 3\nTreasur!")))
-//                dynamicTest("Negative test Brocken structure",
-//                        () -> assertThrows(BrokenStructureException.class,
-//                                () -> coordinate("West 6West 5\nTreasure!"))),
-//                dynamicTest("Negative test Brocken structure",
-//                        () -> assertThrows(BrokenStructureException.class,
-//                                () -> coordinate("West 6West 5\nTreasure!")))
         );
     }
 
     @TestFactory
     public List<DynamicTest> coordinateTestBrockenStructureOfRow() {
         return Arrays.asList(
-//                dynamicTest("Incorrect structure of row",
-//                        () -> assertThrows(BrokenStructureOfRowException.class,
-//                                () -> coordinate("South 6\nWest 3\nTreasure"))),
                 dynamicTest("Incorrect structure of row",
                         () -> assertThrows(BrokenStructureOfRowException.class,
                                 () -> coordinate("North 3\n 5\nEast 3\nTreasure!"))),
@@ -163,27 +147,6 @@ public class CoordinatesTest {
 
     }
 
-//    @TestFactory
-//    public List<DynamicTest> coordinateTestBrokenContent() {
-//        return Arrays.asList(
-////                dynamicTest("Incorrect structure of Content",
-////                        () -> assertThrows(BrokenContentException.class,
-////                                () -> coordinate("South 6\nWest 3\nStop!"))),
-////                dynamicTest("Incorrect structure of Content",
-////                        ()-> assertThrows(BrokenContentException.class,
-////                                ()-> coordinate("South 6\nWest 3\nTreasur!"))),
-////                dynamicTest("Incorrect structure of Content",
-////                        ()-> assertThrows(BrokenContentException.class,
-////                                ()-> coordinate("South 6\nTest 3\nTreasure!"))),
-////                dynamicTest("Incorrect structure of Content",
-////                        ()-> assertThrows(BrokenContentException.class,
-////                        ()-> coordinate("South 6.3\nWest 3\nTreasure!"))),
-//                dynamicTest("Incorrect structure of Content",
-//                        ()-> assertThrows(BrokenContentException.class,
-//                                ()-> coordinate("West -5\nTreasure!")))
-//
-//                );
-//    }
 }
 
 

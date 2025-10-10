@@ -1,5 +1,7 @@
 package arraysTopics;
 
+import java.util.Arrays;
+
 public class ArraysTwoDimensional {
 
     public static void rightNeighborMoreThenZero() {
@@ -56,6 +58,103 @@ public class ArraysTwoDimensional {
             }
         }
     }
+
+    public static void sumOfElements() {
+        int[][] matrix = {
+                {  1, -5,  7, -2, 1 },
+                { -6,  4, -1,  6, 1 },
+                {  8, -3,  2, -9, 1 },
+                { -9,  4, -5,  1, 1 }
+        };
+
+        int sum = 0;
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+               sum = sum + matrix[i][j];
+            }
+
+        }
+
+        System.out.println(sum);
+
+
+
+    }
+
+    public static void sumOfRow(){
+        int[][] matrix = {
+                {  1, -5,  7, -2, 1 },
+                { -6,  4, -1,  6, 1 },
+                {  8, -3,  2, -9, 1 },
+                { -9,  4, -5,  1, 1 }
+        };
+
+        int count = 0;
+
+        for (int i = 0; i < matrix.length; i++) {
+            count = count +1;
+        }
+
+        int[] sumOfRow = new int[count];
+
+        int sum = 0;
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j <matrix[i].length; j++) {
+                int current = matrix[i][j];
+                sum = sum + matrix[i][j];
+            }
+            sumOfRow[i] = sum;
+            sum = 0;
+         // System.out.println(sumOfRow[i]);
+        }
+
+       // System.out.println(Arrays.toString(sumOfRow));
+
+    }
+
+    public static void sumOfColumns(){
+        int[][] matrix = {
+                {  1, -5,  7, -2, 1, 2 },
+                { -6,  4, -1,  6, 1, 2 },
+                {  8, -3,  2, -9, 1, 2 },
+                { -9,  4, -5,  1, 1, 2 }
+        };
+
+        int count = 0;
+        int current = 0;
+
+
+            for (int j = 0; j < matrix[0].length; j++) {
+               // current = matrix[i][j];
+               count = count +1;
+            }
+
+            int[] sumOfColumnsAr = new int[count];
+
+            int sum = 0;
+
+
+            for (int j = 0; j < matrix[0].length; j++) {
+                for (int i = 0; i < matrix.length; i++) {
+                sum = sum + matrix[i][j];
+            }
+                sumOfColumnsAr[j] = sum;
+              sum = 0;
+        }
+
+        System.out.println(Arrays.toString(sumOfColumnsAr));
+
+    }
+
+
+
+
+
+
+
+
 
     //  Є двохвимірний список - -4. Сума всіх чисел
 //        int[][] matrix = {

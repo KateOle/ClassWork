@@ -1,9 +1,18 @@
+import arraysTopics.ArraysString;
+import arraysTopics.ArraysTwoDimensional;
 
 public class Main {
 
 
     public static void main(String[] args) {
 
+       ArraysTwoDimensional.sumOfColumns();
+
+        // ArraysTwoDimensional.sumOfRow();
+
+      //  ArraysTwoDimensional.sumOfElements();
+
+      //  ArraysString.shorterThenThreeLetters();
 
         //  ArraysOneD.SumHalfOfArray();
 

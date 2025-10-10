@@ -1,5 +1,7 @@
 package arraysTopics;
 
+import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class ArraysString {
@@ -106,4 +108,36 @@ public class ArraysString {
 
 
     }
+
+    public static void shorterThenThreeLetters() {
+        // Список слів - знайти всі слова які менше 3 букв
+        String[] words = {"cat", "buble", "an", "dog", "a", "rat", "t"};
+
+        int count = 0;
+        int lengthWord = 0;
+
+        for (int i = 0; i < words.length; i++) {
+          lengthWord = words[i].length();
+            if(lengthWord <= 2){
+                count = count + 1;
+            }
+        }
+
+        String[] shortWords = new String[count];
+
+        int j = 0;
+
+        for (int i = 0; i < words.length; i++) {
+            if(words[i].length() <= 2){
+                shortWords[j] = words[i];
+                j = j+1;
+            }
+
+        }
+
+        System.out.println(Arrays.toString(shortWords));
+
+
+    }
+
 }
