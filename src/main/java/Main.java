@@ -6,7 +6,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-       ArraysTwoDimensional.sumOfColumns();
+      ArraysTwoDimensional.removeElement();
+        //  ArraysTwoDimensional.getConcatArray();
+     //   ArraysTwoDimensional.buyAndSellStoke();
+      //  ArraysTwoDimensional.fromTwoTwoDecToOneTwoDec();
+
+      //  ArraysTwoDimensional.fromOneDtoTwoDArray();
+
+      //  ArraysTwoDimensional.multipleAndAverage();
+
+      //ArraysTwoDimensional.exchangeRowsOfMatrix();
+
+      // ArraysTwoDimensional.sumOfDiag();
+
+        // ArraysTwoDimensional.flattenOfArray();
+
+      // ArraysTwoDimensional.sumOfColumns();
 
         // ArraysTwoDimensional.sumOfRow();
 
