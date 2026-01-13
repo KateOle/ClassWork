@@ -6,8 +6,8 @@ public class Client {
 
     String name;
     String surname;
-    int account;  // String ??
-    int balance; // float ??
+    int account;
+    int balance;
     LocalDate dateOfOpeningAccount;
 
     static int pensAge = 65;
