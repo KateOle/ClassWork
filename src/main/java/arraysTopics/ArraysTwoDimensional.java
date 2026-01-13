@@ -543,14 +543,7 @@ public class ArraysTwoDimensional {
         System.out.println();
         System.out.println("k " + point);
 
-
     }
-
-
-
-
-
-
 
 
 //        for (int i = 0; i < oneDec.length/5; i++) {
