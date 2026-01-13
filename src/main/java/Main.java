@@ -1,12 +1,74 @@
-import arraysTopics.ArraysString;
-import arraysTopics.ArraysTwoDimensional;
+import oop.Book;
+import oop.Client;
+import oop.ClientsData;
+import oop.man;
+
+import java.time.LocalDate;
 
 public class Main {
 
 
     public static void main(String[] args) {
 
-      ArraysTwoDimensional.removeElement();
+//        // Class Man
+//        man Kate = new man("Kate", 30, false);
+//
+//        man Ivan = new man("Ivan", 30, true);
+//
+//        Kate.isPensioner();
+//        Kate.getAge();
+//        Kate.plusOneYear();
+//
+//        Kate.updateAge(Ivan);
+//
+//        System.out.println(Kate.getAge());
+
+        // 2. Class Book
+//        Book firstBook = new Book("Luice Karol","Alice in wonderland", 1980, 700);
+//
+//        firstBook.getAuthorAndTitle();
+//        firstBook.setYearOfPublication(1982);
+//
+//        System.out.println(firstBook.getAuthorAndTitle());
+
+        // 3. Class Client
+
+        Client client1 = new Client("Vasyl", "Petrov", 123456, 10000, LocalDate.of(2025,3,1));
+        Client client2 = new Client("Viktoriia", "Kolesnikova", 654321, 100, LocalDate.of(2025,7,1));
+        Client client3 = new Client("Andrii", "Koshko", 654321, 356, LocalDate.of(2016,12,1));
+        Client client4 = new Client("Petro", "Chomiachko", 56789, 6589, LocalDate.of(2019,12,3));
+        Client client5 = new Client("Olena", "Freeborn", 987456, 12359, LocalDate.of(2018,11,30));
+
+        ClientsData cd1 = new ClientsData();
+
+        cd1.addClient(client1);
+        cd1.addClient(client2);
+        cd1.addClient(client3);
+        cd1.addClient(client4);
+        cd1.addClient(client5);
+
+      //  cd1.getEarliestDateOfOpeningAccount();
+
+        System.out.println(cd1.getEarliestDateOfOpeningAccount());
+        System.out.println(cd1.getAmountOfMoney());
+        System.out.println(cd1.getLatestOpenAccountDate());
+        System.out.println(cd1.getDateRange());
+        System.out.println(cd1.allClients());
+
+//        double f = 0.000001d;
+//        double sum = 0;
+//
+//        for (int i = 0; i < 1000000; i++) {
+//          sum = f + sum;
+//        }
+//        System.out.println(sum);
+
+
+
+
+
+
+        // ArraysTwoDimensional.removeElement();
         //  ArraysTwoDimensional.getConcatArray();
      //   ArraysTwoDimensional.buyAndSellStoke();
       //  ArraysTwoDimensional.fromTwoTwoDecToOneTwoDec();
