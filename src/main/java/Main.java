@@ -1,7 +1,5 @@
-import oop.Book;
 import oop.Client;
 import oop.ClientsData;
-import oop.man;
 
 import java.time.LocalDate;
 
@@ -33,11 +31,11 @@ public class Main {
 
         // 3. Class Client
 
-        Client client1 = new Client("Vasyl", "Petrov", 123456, 10000, LocalDate.of(2025,3,1));
+        Client client1 = new Client("Andrii", "Koshko", 123456, 10000, LocalDate.of(2025,3,1));
         Client client2 = new Client("Viktoriia", "Kolesnikova", 654321, 100, LocalDate.of(2025,7,1));
         Client client3 = new Client("Andrii", "Koshko", 654321, 356, LocalDate.of(2016,12,1));
-        Client client4 = new Client("Petro", "Chomiachko", 56789, 6589, LocalDate.of(2019,12,3));
-        Client client5 = new Client("Olena", "Freeborn", 987456, 12359, LocalDate.of(2018,11,30));
+        Client client4 = new Client("Andrii", "Koshko", 56789, 6589, LocalDate.of(2019,12,3));
+        Client client5 = new Client("Olena", "Koshko", 987456, 12359, LocalDate.of(2018,11,30));
 
         ClientsData cd1 = new ClientsData();
 
@@ -46,14 +44,31 @@ public class Main {
         cd1.addClient(client3);
         cd1.addClient(client4);
         cd1.addClient(client5);
+    //  System.out.println(cd1.getClientsData());
+        cd1.removeClient(654321);
+      //  cd1.removeClient("Koshko");
+       // cd1.getClientByAccount(56789);
 
-      //  cd1.getEarliestDateOfOpeningAccount();
+   //   cd1.getEarliestDateOfOpeningAccount();
 
-        System.out.println(cd1.getEarliestDateOfOpeningAccount());
-        System.out.println(cd1.getAmountOfMoney());
-        System.out.println(cd1.getLatestOpenAccountDate());
-        System.out.println(cd1.getDateRange());
-        System.out.println(cd1.allClients());
+   //    System.out.println(cd1.getEarliestDateOfOpeningAccount());
+   //    System.out.println(cd1.getAmountOfMoney());
+     // System.out.println(cd1.getLatestOpenAccountDate());
+    //   System.out.println(cd1.getDateRange());
+       // System.out.println(cd1.allClients());
+     //   System.out.println(cd1.getClientsData());
+        System.out.println(cd1.getClient(56789));
+
+        Client searchedClient = cd1.getClient("Katya");
+
+        if(searchedClient == null){
+            System.out.println("There is no such Client, please try again");
+        } else
+            System.out.println(searchedClient.getAccount());
+
+        System.out.println(cd1.getClient("Andrii").getAccount());
+
+
 
 //        double f = 0.000001d;
 //        double sum = 0;
