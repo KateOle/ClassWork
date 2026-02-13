@@ -146,8 +146,8 @@ public class ClientsData {
         return searchedClients;
     }
 
-    // Знайти і повернути клієнта по імені + дописати, шоб вертав список клієнтів з однаковими іменами
-    public Client getClient(String name){
+    // Знайти і повернути клієнта по імені - find last
+    public Client getClientLast(String name){
 
         Client c = null;
 
@@ -159,5 +159,137 @@ public class ClientsData {
         }
         return c;
     }
+
+    // Знайти і повернути клієнта по імені - find last
+    public Client getClientFirst(String name){
+
+        Client c = null;
+
+        for (int i = 0; i < clientsBase.size(); i++) {
+            if(name.equals(clientsBase.get(i).getName())){
+                c = clientsBase.get(i);
+                return c;
+            }
+        }
+        return c;
+    }
+
+    // Знайти і повернути клієнта по імені - find all
+    public List<Client> getClientAll(String name){
+
+        List<Client> c = new LinkedList<>();
+
+        for (int i = 0; i < clientsBase.size(); i++) {
+            if(name.equals(clientsBase.get(i).getName())){
+                c.add(0, clientsBase.get(i));
+
+            }
+        }
+        return c;
+    }
+
+//    public String getNameAll(){
+//
+//        String name = "";
+//
+//        for (int i = 0; i < clientsBase.size(); i++) {
+//            name += clientsBase.get(i).getName() + " ";
+//
+//        }
+//
+//        return name;
+//    }
+
+    public List<String> getNameAll(){
+
+        List<String> name = new LinkedList<>();
+
+        for (int i = 0; i < clientsBase.size(); i++) {
+            name.add(clientsBase.get(i).getName());
+
+        }
+
+        return name;
+    }
+
+    public List<String> getSurnameAll(){
+
+        List<String> surname = new LinkedList<>();
+
+        for (int i = 0; i < clientsBase.size(); i++) {
+            surname.add(clientsBase.get(i).surname);
+
+        }
+
+        return surname;
+    }
+
+    public List<String> getNameSurnameAccount(){
+
+        List<String> nameSurnAccount = new LinkedList<>();
+
+        for (int i = 0; i < clientsBase.size(); i++) {
+            nameSurnAccount.add(clientsBase.get(i).name + " " + (clientsBase.get(i).surname) + " " + (String.valueOf(clientsBase.get(i).account)));
+        }
+
+        return nameSurnAccount;
+    }
+
+    // Два списки злити в один
+    public ClientsData mergedClientBase(ClientsData other){
+
+        List<Client> mergedBase = new LinkedList<>();
+
+      ClientsData clientsData = new ClientsData();
+
+        for (int i = 0; i < this.clientsBase.size(); i++) {
+         mergedBase.add(i, clientsBase.get(i));
+
+        }
+
+        for (int i = 0; i < other.clientsBase.size(); i++) {
+
+            boolean duplicate = false;
+
+            for (int j = 0; j < mergedBase.size(); j++) {
+
+                if(mergedBase.get(j).getAccount() == other.clientsBase.get(i).getAccount())
+                {
+                    duplicate = true;
+                }
+            }
+                if(duplicate == false)
+                    mergedBase.add(other.clientsBase.get(i));
+            }
+
+
+        clientsData.clientsBase = mergedBase;
+
+        return clientsData;
+    }
+
+//    // Два списки злити в один
+//    public ClientsData mergedClientBase(ClientsData other) {
+//
+//        List<Client> mergedBase = new LinkedList<>();
+//
+//        ClientsData clientsData = new ClientsData();
+//
+//        for (int i = 0; i < this.clientsBase.size(); i++) {
+//            mergedBase.add(i, clientsBase.get(i));
+//
+//        }
+//
+//        for (int i = 0; i < other.clientsBase.size(); i++) {
+//
+//            if (!mergedBase.contains(other.clientsBase.get(i))) {
+//                mergedBase.add(other.clientsBase.get(i));
+//            }
+//        }
+//
+//            clientsData.clientsBase = mergedBase;
+//
+//            return clientsData;
+//        }
 
 }

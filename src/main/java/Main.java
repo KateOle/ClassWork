@@ -2,6 +2,8 @@ import oop.Client;
 import oop.ClientsData;
 
 import java.time.LocalDate;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Main {
 
@@ -33,19 +35,38 @@ public class Main {
 
         Client client1 = new Client("Andrii", "Koshko", 123456, 10000, LocalDate.of(2025,3,1));
         Client client2 = new Client("Viktoriia", "Kolesnikova", 654321, 100, LocalDate.of(2025,7,1));
-        Client client3 = new Client("Andrii", "Koshko", 654321, 356, LocalDate.of(2016,12,1));
-        Client client4 = new Client("Andrii", "Koshko", 56789, 6589, LocalDate.of(2019,12,3));
+        Client client3 = new Client("Andrii", "Pes", 654321, 356, LocalDate.of(2016,12,1));
+        Client client4 = new Client("Andrii", "Chomiaczko", 56789, 6589, LocalDate.of(2019,12,3));
         Client client5 = new Client("Olena", "Koshko", 987456, 12359, LocalDate.of(2018,11,30));
 
+        Client client6 = new Client("Kateryna", "Koshko", 987431, 123311, LocalDate.of(2015,11,30));
+        Client client7 = new Client("Olena", "Pesko", 987894, 56359, LocalDate.of(2016,11,30));
+      //  Client client8 = new Client("Andrii", "Chomiaczko", 56789, 12332, LocalDate.of(2022,11,30));
+        Client client9 = new Client("Marta", "Kotko", 561456, 12000, LocalDate.of(2023,11,30));
+        Client client10 = client4;
+
+
         ClientsData cd1 = new ClientsData();
+        ClientsData cd2 = new ClientsData();
+
+        List<Client> cdlist = new LinkedList<>();
 
         cd1.addClient(client1);
         cd1.addClient(client2);
         cd1.addClient(client3);
         cd1.addClient(client4);
         cd1.addClient(client5);
+
+        cd2.addClient(client6);
+        cd2.addClient(client7);
+       // cd2.addClient(client8);
+        cd2.addClient(client9);
+        cd2.addClient(client10);
+
+
+
     //  System.out.println(cd1.getClientsData());
-        cd1.removeClient(654321);
+     //   cd1.removeClient(654321);
       //  cd1.removeClient("Koshko");
        // cd1.getClientByAccount(56789);
 
@@ -57,16 +78,27 @@ public class Main {
     //   System.out.println(cd1.getDateRange());
        // System.out.println(cd1.allClients());
      //   System.out.println(cd1.getClientsData());
-        System.out.println(cd1.getClient(56789));
+     //   System.out.println(cd1.getClient(56789));
 
-        Client searchedClient = cd1.getClient("Katya");
+//        Client searchedClient = cd1.getClientLast("Katya");
+//
+//        if(searchedClient == null){
+//            System.out.println("There is no such Client, please try again");
+//        } else
+//            System.out.println(searchedClient.getAccount());
 
-        if(searchedClient == null){
-            System.out.println("There is no such Client, please try again");
-        } else
-            System.out.println(searchedClient.getAccount());
+       // System.out.println(cd1.getClientLast("Andrii").getAccount());
+       // System.out.println(cd1.getClientFirst("Andrii").getAccount());
 
-        System.out.println(cd1.getClient("Andrii").getAccount());
+//       cdlist = cd1.getClientAll("Andrii");
+//
+//
+//        for (int i = 0; i < cdlist.size() ; i++) {
+//            System.out.println(cdlist.get(i).getName());
+//        }
+
+        System.out.println(cd1.mergedClientBase(cd2).getNameSurnameAccount());
+
 
 
 
