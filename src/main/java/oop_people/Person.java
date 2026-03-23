@@ -12,18 +12,18 @@ import java.util.LinkedList;
 
 public class Person {
 
-  String stuff;
+ // String stuff;
   String name;
   String surname;
   LocalDate dateOfBirth;
   // int age;
  // LinkedList <String> listOfStuff;
 
-    LinkedList <String> listOfStuff = new LinkedList<>();
+   LinkedList <String> pocket = new LinkedList<>();
 
-    public Person(String stuff, String name, String surname, LocalDate dateOfBirthd) {
-        this.stuff = stuff;
-      //  this.listOfStuff = listOfStuff;
+    public Person(String name, String surname, LocalDate dateOfBirthd) {
+      //  this.stuffForPerson = stuffForPerson;
+      //  this.stuff = stuff;
         this.name = name;
         this.surname = surname;
         this.dateOfBirth = dateOfBirthd;
@@ -36,11 +36,7 @@ public class Person {
     @Override
     public String toString() {
      //   return super.toString();
-        return name+" "+surname;
-    }
-
-    public String getStuff() {
-        return stuff;
+        return name+" "+surname+" "+ pocket;
     }
 
     public String getName() {
@@ -55,13 +51,13 @@ public class Person {
         return dateOfBirth;
     }
 
+    public LinkedList<String> getPocket() {
+        return pocket;
+    }
+
     //    public LinkedList<String> getListOfStuff() {
 //        return listOfStuff;
 //    }
-
-    public void setStuff(String stuff) {
-        this.stuff = stuff;
-    }
 
     public void setName(String name) {
         this.name = name;
@@ -69,6 +65,18 @@ public class Person {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public boolean isPocketEmpty(){
+
+        return pocket.isEmpty();
+
+    }
+
+    public boolean isPocketExist(){
+
+        return pocket != null;
+
     }
 
     // Date of Birth
@@ -85,26 +93,46 @@ public class Person {
     }
 
 
-    // прийняти вещи
-    public String addStuff(String stuff){
+    //  Додати речі в список людини
+    public void addStuff(String stuff){
 
-        listOfStuff.add(0, stuff);
+      //  Storage listOfStuff = new Storage();
 
-        return null;
+        pocket.add(0, stuff);
+
+       // return null;
     }
 
-    // віддати предмет
-    public void giveStuff(ListOfStuff repositorium){
+    // віддати предмет в кучу
+    public void giveStuff(Storage repositorium) throws NoItemsInThePocketException{
 
-        if(this.stuff == null){
-            System.out.println("The person doesn't have any stuff");
+        if(pocket.isEmpty()){
+            throw new NoItemsInThePocketException();
 
         } else {
-            repositorium.addOfStuff(this.stuff);
-            this.stuff = null;
+            repositorium.addOfStuff(pocket.pop());
+
         }
 
+    }
+
+    // віддати предмет людині
+    public void giveStuff(Person personWhoTakesGift) throws NoItemsInThePocketException {
+
+        String stuffForGift;
+
+        if(pocket.isEmpty()){
+            throw new NoItemsInThePocketException();
+          //  System.out.println("The person doesn't have any stuff");
+
+        } else {
+            stuffForGift = pocket.pop();
+            personWhoTakesGift.pocket.add(0, stuffForGift);
+
+        }
 
     }
+
+
 
 }

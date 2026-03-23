@@ -1,7 +1,10 @@
-import oop_people.ListOfStuff;
+import oop_people.NoItemsInThePocketException;
+import oop_people.Storage;
 import oop_people.Person;
+import oop_people.Tests;
 
 import java.time.LocalDate;
+import java.util.LinkedList;
 
 public class Main {
 
@@ -100,22 +103,78 @@ public class Main {
 
         // 4. Class Person
 
-        Person person1 = new Person("Phone", "Petro", "Koshko", LocalDate.of(1990, 12, 23) );
-        Person person2 = new Person("Ball", "Vasyl", "Rysko", LocalDate.of(2026, 2, 18) );
-        Person person3 = new Person("Laptop", "Olena", "Slonko", LocalDate.of(1998, 2, 27) );
+        LinkedList<String> perst = new LinkedList<>();
 
-        ListOfStuff st1 = new ListOfStuff();
+        Person person1 = new Person( "Petro", "Koshko", LocalDate.of(1990, 12, 23) );
+        Person person2 = new Person( "Vasyl", "Rysko", LocalDate.of(2026, 2, 18) );
+        Person person3 = new Person( "Olena", "Slonko", LocalDate.of(1998, 2, 27) );
+
+        person1.addStuff("Phone");
+        person2.addStuff("Laptop");
+        person3.addStuff("Ball");
+        person3.addStuff("Cap");
+
+        Storage st1 = new Storage();
 
         st1.addOfStuff("Book");
         st1.addOfStuff("Notebook");
 
-        System.out.println(st1.printList());
+//        try {
+//            person1.giveStuff(person2);
+//            person1.giveStuff(person2);
+//        } catch (NoItemsInThePocketException e) {
+//            System.out.println(" There is no items in the pocket of " + person1);
+//        }
+//
+//        try {
+//            person1.giveStuff(st1);
+//        } catch (NoItemsInThePocketException e) {
+//            System.out.println( " There is no items in the pocket of " + person1);
+//        }
 
-        System.out.println(person1.getAge());
-        System.out.println(person2.getAge());
+        //    System.out.println(st1.printList());
 
-        person1.setName("Luka");
-        System.out.println(person1);
+     //   System.out.println(person1.getAge());
+     //   System.out.println(person2.getAge());
+
+     //   person1.setName("Luka");
+    //    System.out.println(person1);
+
+
+
+//        System.out.println("Person who has some stuff - " + person2);
+//
+//        System.out.println("Initial heap of stuff - " + st1.printList());
+//
+//        System.out.println();
+//
+//        person2.giveStuff(st1);
+//
+//        System.out.println("Person put his stuff to the heap - " + person2);
+//
+//        System.out.println("The heap after th stuff was added - " + st1.printList());
+//
+//        System.out.println();
+
+
+//
+//        System.out.println(person3);
+//        System.out.println(person1);
+//
+//        person3.giveStuff(st1);
+//
+//        System.out.println();
+//        System.out.println(st1.printList());
+//       System.out.println(person3);
+//
+//        System.out.println();
+
+        Tests test = new Tests();
+
+        test.positiveTestsPerson();
+
+
+
 
 
 
