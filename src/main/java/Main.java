@@ -145,8 +145,6 @@ public class Main {
      //   person1.setName("Luka");
     //    System.out.println(person1);
 
-
-
 //        System.out.println("Person who has some stuff - " + person2);
 //
 //        System.out.println("Initial heap of stuff - " + st1.printList());
@@ -161,7 +159,6 @@ public class Main {
 //
 //        System.out.println();
 
-
 //
 //        System.out.println(person3);
 //        System.out.println(person1);
@@ -174,29 +171,11 @@ public class Main {
 //
 //        System.out.println();
 
-
-
-
-
-
-
-
-
-
-
 //        for (int i = 0; i < st1.size(); i++) {
 //            st1.add("Test");
 //        }
 
 
-
-//        double f = 0.000001d;
-//        double sum = 0;
-//
-//        for (int i = 0; i < 1000000; i++) {
-//          sum = f + sum;
-//        }
-//        System.out.println(sum);
 
 
     //24.03.2026
