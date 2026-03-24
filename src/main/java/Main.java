@@ -23,6 +23,7 @@ public class Main {
 //
 //        Kate.updateAge(Ivan);
 //
+
 //        System.out.println(Kate.getAge());
 
         // 2. Class Book
