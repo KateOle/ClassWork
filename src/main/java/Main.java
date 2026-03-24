@@ -104,18 +104,18 @@ public class Main {
 
         // 4. Class Person -> 20.03.2026
 
-//        LinkedList<String> perst = new LinkedList<>();
-//
-//        Person person1 = new Person( "Petro", "Koshko", LocalDate.of(1990, 12, 23) );
-//        Person person2 = new Person( "Vasyl", "Rysko", LocalDate.of(2026, 2, 18) );
-//        Person person3 = new Person( "Olena", "Slonko", LocalDate.of(1998, 2, 27) );
-//
-//        person1.addStuff("Phone");
-//        person2.addStuff("Laptop");
-//        person3.addStuff("Ball");
-//        person3.addStuff("Cap");
-//
-//        Storage st1 = new Storage();
+        LinkedList<String> perst = new LinkedList<>();
+
+        Person person1 = new Person( "Petro", "Koshko", LocalDate.of(1990, 12, 23) );
+        Person person2 = new Person( "Vasyl", "Rysko", LocalDate.of(2026, 2, 18) );
+        Person person3 = new Person( "Olena", "Slonko", LocalDate.of(1998, 2, 27) );
+
+        person1.addStuff("Phone");
+        person2.addStuff("Laptop");
+        person3.addStuff("Ball");
+        person3.addStuff("Cap");
+
+        Storage st1 = new Storage();
 //
 //        st1.addOfStuff("Book");
 //        st1.addOfStuff("Notebook");
@@ -199,85 +199,8 @@ public class Main {
 //        System.out.println(sum);
 
 
-
-
-
-
-        // ArraysTwoDimensional.removeElement();
-        //  ArraysTwoDimensional.getConcatArray();
-     //   ArraysTwoDimensional.buyAndSellStoke();
-      //  ArraysTwoDimensional.fromTwoTwoDecToOneTwoDec();
-
-      //  ArraysTwoDimensional.fromOneDtoTwoDArray();
-
-      //  ArraysTwoDimensional.multipleAndAverage();
-
-      //ArraysTwoDimensional.exchangeRowsOfMatrix();
-
-      // ArraysTwoDimensional.sumOfDiag();
-
-        // ArraysTwoDimensional.flattenOfArray();
-
-      // ArraysTwoDimensional.sumOfColumns();
-
-        // ArraysTwoDimensional.sumOfRow();
-
-      //  ArraysTwoDimensional.sumOfElements();
-
-      //  ArraysString.shorterThenThreeLetters();
-
-        //  ArraysOneD.SumHalfOfArray();
-
-      //  ArraysTwoDimensional.filterOddRowsOddLines();
-
-      //  NumericTypes.decimalNumbers();
-
-      //  NumericTypes.massOfFlour();
-
-       // NumericTypes.amountOfSegmentB();
-
-      //  NumericTypes.sumOfNumber();
-      //  NumericTypes.hoursOfSlep();
-      //  NumericTypes.sumOfNaturalNumbers();
-      //  NumericTypes.amountOfTables();
-     //   NumericTypes.firstDiitAfterComa();
-     //   NumericTypes.amountOfWorkDaysAndWeekends();
-       //   Calculator.calculatorIndexMassOfBody();
-     // NumericTypes.angleOfClockWise();
-      //  NumericTypes.angleOfMinuteClockWise();
-      //  ifTopics.Calculator.placeOfLetters();
-       // Calculator.weather();
-      //  ArraysString.upperAndLowerCaseInString();
-     // Calculator.replaceEvenNumbers1();
-      //  Calculator.traficLight();
-      //  Calculator.forDigitsPolindrom();
-      //  Calculator.integerToBinary();
-       // Calculator.nextDay();
-      //  Calculator.previousDate();
-        //loopsTopics.LoopFor.sumOfElements();
-       // LoopFor.averNumbers();
-       // LoopFor.power();
-      // LoopFor.SumOfPower();
-      //  LoopFor.minTempofMonth();
-       // LoopFor.minTempofMonthWhile();
-       // LoopFor.steps();
-       // LoopFor.stepsFor();
-       // LoopFor.isAutomorfnNumber();
-      //  LoopFor.oddNaturalNumer();
-       // LoopFor.algorithmEuclida1();
-       // LoopFor.numberOfDigitFromTheEnd();
-      //  LoopFor.polindrom();
-      //  LoopFor.rowOfCards();
-   //LoopFor.division();
-      //  LoopFor.amountOfNumbers();
-      //  LoopFor.devideToEveryDigit();
-      //  LoopFor.money();
-      //  LoopFor.findTwoNumbersifKnownSumAndMultiple();
-      // LoopFor.intervalOddNumbers();
-      //  LoopFor.intervalOfEvenNumbers();
-       // Strings.stringUpperLowerCases();
-   //     System.out.println(args[0]);
-        CyclicInputVerification.InputANumber();
+    //24.03.2026
+    //    CyclicInputVerification.InputANumber();
 
 
 // 4 partii - 0, 1, 2, 3. 1000 people in every parties. 20% of people move to the party there speaker tells.
