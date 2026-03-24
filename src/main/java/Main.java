@@ -1,3 +1,4 @@
+import exceptions_Exercises.CyclicInputVerification;
 import oop_people.NoItemsInThePocketException;
 import oop_people.Storage;
 import oop_people.Person;
@@ -101,23 +102,27 @@ public class Main {
 //        System.out.println(cd1.mergedClientBase(cd2).getNameSurnameAccount());
 
 
-        // 4. Class Person
+        // 4. Class Person -> 20.03.2026
 
-        LinkedList<String> perst = new LinkedList<>();
-
-        Person person1 = new Person( "Petro", "Koshko", LocalDate.of(1990, 12, 23) );
-        Person person2 = new Person( "Vasyl", "Rysko", LocalDate.of(2026, 2, 18) );
-        Person person3 = new Person( "Olena", "Slonko", LocalDate.of(1998, 2, 27) );
-
-        person1.addStuff("Phone");
-        person2.addStuff("Laptop");
-        person3.addStuff("Ball");
-        person3.addStuff("Cap");
-
-        Storage st1 = new Storage();
-
-        st1.addOfStuff("Book");
-        st1.addOfStuff("Notebook");
+//        LinkedList<String> perst = new LinkedList<>();
+//
+//        Person person1 = new Person( "Petro", "Koshko", LocalDate.of(1990, 12, 23) );
+//        Person person2 = new Person( "Vasyl", "Rysko", LocalDate.of(2026, 2, 18) );
+//        Person person3 = new Person( "Olena", "Slonko", LocalDate.of(1998, 2, 27) );
+//
+//        person1.addStuff("Phone");
+//        person2.addStuff("Laptop");
+//        person3.addStuff("Ball");
+//        person3.addStuff("Cap");
+//
+//        Storage st1 = new Storage();
+//
+//        st1.addOfStuff("Book");
+//        st1.addOfStuff("Notebook");
+//
+//        Tests test = new Tests();
+//
+//        test.positiveTestsPerson();
 
 //        try {
 //            person1.giveStuff(person2);
@@ -169,9 +174,7 @@ public class Main {
 //
 //        System.out.println();
 
-        Tests test = new Tests();
 
-        test.positiveTestsPerson();
 
 
 
@@ -274,6 +277,7 @@ public class Main {
       //  LoopFor.intervalOfEvenNumbers();
        // Strings.stringUpperLowerCases();
    //     System.out.println(args[0]);
+        CyclicInputVerification.InputANumber();
 
 
 // 4 partii - 0, 1, 2, 3. 1000 people in every parties. 20% of people move to the party there speaker tells.
