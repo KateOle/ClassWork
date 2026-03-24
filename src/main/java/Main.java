@@ -12,20 +12,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        // Class Man
-//        man Kate = new man("Kate", 30, false);
-//
-//        man Ivan = new man("Ivan", 30, true);
-//
-//        Kate.isPensioner();
-//        Kate.getAge();
-//        Kate.plusOneYear();
-//
-//        Kate.updateAge(Ivan);
-//
-
-//        System.out.println(Kate.getAge());
-
         // 2. Class Book
 //        Book firstBook = new Book("Luice Karol","Alice in wonderland", 1980, 700);
 //
