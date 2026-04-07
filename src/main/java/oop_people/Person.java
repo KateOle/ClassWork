@@ -21,6 +21,8 @@ public class Person {
 
    LinkedList <String> pocket = new LinkedList<>();
 
+   PeopleGroup peopleGroup = new PeopleGroup();
+
     public Person(String name, String surname, LocalDate dateOfBirthd) {
       //  this.stuffForPerson = stuffForPerson;
       //  this.stuff = stuff;
@@ -133,6 +135,26 @@ public class Person {
 
     }
 
+    //забрати предмет
+
+    public void removeStuff(){
+
+      //  String stuff1;
+
+        if(pocket.isEmpty()){
+
+        } else
+            pocket.remove(0);
 
 
+
+    }
+
+    // видалити всі речі з карману кожної людини
+
+    public void clearPockets(){
+
+        pocket.clear();
+
+    }
 }

@@ -1,8 +1,5 @@
 import exceptions_Exercises.CyclicInputVerification;
-import oop_people.NoItemsInThePocketException;
-import oop_people.Storage;
-import oop_people.Person;
-import oop_people.Tests;
+import oop_people.*;
 
 import java.time.LocalDate;
 import java.util.LinkedList;
@@ -19,6 +16,7 @@ public class Main {
 //        firstBook.setYearOfPublication(1982);
 //
 //        System.out.println(firstBook.getAuthorAndTitle());
+
 
         // 3. Class Client
 //
@@ -51,8 +49,6 @@ public class Main {
 //       // cd2.addClient(client8);
 //        cd2.addClient(client9);
 //        cd2.addClient(client10);
-//
-//
 //
 //    //  System.out.println(cd1.getClientsData());
 //     //   cd1.removeClient(654321);
@@ -89,6 +85,7 @@ public class Main {
 //        System.out.println(cd1.mergedClientBase(cd2).getNameSurnameAccount());
 
 
+
         // 4. Class Person -> 20.03.2026
 
         LinkedList<String> perst = new LinkedList<>();
@@ -96,14 +93,39 @@ public class Main {
         Person person1 = new Person( "Petro", "Koshko", LocalDate.of(1990, 12, 23) );
         Person person2 = new Person( "Vasyl", "Rysko", LocalDate.of(2026, 2, 18) );
         Person person3 = new Person( "Olena", "Slonko", LocalDate.of(1998, 2, 27) );
+        Person person4 = new Person( "Martin", "Popko", LocalDate.of(1999, 5, 27) );
 
         person1.addStuff("Phone");
         person2.addStuff("Laptop");
         person3.addStuff("Ball");
-        person3.addStuff("Cap");
+        person3.addStuff("Phone");
+        person3.addStuff("Paper");
 
         Storage st1 = new Storage();
-//
+
+
+        PeopleGroup peopleGroup = new PeopleGroup();
+
+        peopleGroup.addPerson(person1);
+        peopleGroup.addPerson(person2);
+        peopleGroup.addPerson(person3);
+        peopleGroup.addPerson(person4);
+
+        System.out.println(peopleGroup.getUniqueStaff());
+
+        person2.removeStuff();
+
+        System.out.println(peopleGroup.getUniqueStaff());
+
+        person1.addStuff("Pencil");
+
+        System.out.println(peopleGroup.getUniqueStaff());
+
+    //    System.out.println(peopleGroup.amountOfStuff());
+
+        peopleGroup.randomExchangeOfStuff();
+
+
 //        st1.addOfStuff("Book");
 //        st1.addOfStuff("Notebook");
 //
