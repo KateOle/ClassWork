@@ -1,8 +1,5 @@
-import exceptions_Exercises.CyclicInputVerification;
-import oop_people.*;
-
-import java.time.LocalDate;
-import java.util.LinkedList;
+import oop_pizzeria.Orders;
+import oop_pizzeria.Pizza;
 
 public class Main {
 
@@ -88,42 +85,87 @@ public class Main {
 
         // 4. Class Person -> 20.03.2026
 
-        LinkedList<String> perst = new LinkedList<>();
+//        LinkedList<String> perst = new LinkedList<>();
+//
+//        Person person1 = new Person( "Petro", "Koshko", LocalDate.of(1990, 12, 23) );
+//        Person person2 = new Person( "Vasyl", "Rysko", LocalDate.of(2026, 2, 18) );
+//        Person person3 = new Person( "Olena", "Slonko", LocalDate.of(1998, 2, 27) );
+//        Person person4 = new Person( "Martin", "Popko", LocalDate.of(1999, 5, 27) );
+//
+//        person1.addStuff("Phone");
+//        person2.addStuff("Laptop");
+//        person3.addStuff("Ball");
+//        person3.addStuff("Phone");
+//        person3.addStuff("Paper");
+//
+//        Storage st1 = new Storage();
+//
+//
+//        PeopleGroup peopleGroup = new PeopleGroup();
+//
+//        peopleGroup.addPerson(person1);
+//        peopleGroup.addPerson(person2);
+//        peopleGroup.addPerson(person3);
+//        peopleGroup.addPerson(person4);
+//
+//        System.out.println(peopleGroup.getUniqueStaff());
+//
+//        person2.removeStuff();
+//
+//        System.out.println(peopleGroup.getUniqueStaff());
+//
+//        person1.addStuff("Pencil");
+//
+//        System.out.println(peopleGroup.getUniqueStaff());
+//
+//    //    System.out.println(peopleGroup.amountOfStuff());
+//
+//        peopleGroup.randomExchangeOfStuff();
 
-        Person person1 = new Person( "Petro", "Koshko", LocalDate.of(1990, 12, 23) );
-        Person person2 = new Person( "Vasyl", "Rysko", LocalDate.of(2026, 2, 18) );
-        Person person3 = new Person( "Olena", "Slonko", LocalDate.of(1998, 2, 27) );
-        Person person4 = new Person( "Martin", "Popko", LocalDate.of(1999, 5, 27) );
+        // 5. Package - oop_pizzeria -> pizza - 08.04.2026
 
-        person1.addStuff("Phone");
-        person2.addStuff("Laptop");
-        person3.addStuff("Ball");
-        person3.addStuff("Phone");
-        person3.addStuff("Paper");
-
-        Storage st1 = new Storage();
+        Pizza pizza1 = new Pizza("Four cheeses", 400.00);
+        Pizza pizza2 = new Pizza("Salami", 350.00);
+        Pizza pizza3 = new Pizza("Classic", 560.00);
+        Pizza pizza4 = new Pizza("Vegan pizza", 580.00);
 
 
-        PeopleGroup peopleGroup = new PeopleGroup();
+        pizza1.addIngredient("thickDough");
+        pizza1.addIngredient("mozarella");
+        pizza1.addIngredient("parmezan");
+        pizza1.addIngredient("cheder");
+        pizza1.addIngredient("dorBlue");
 
-        peopleGroup.addPerson(person1);
-        peopleGroup.addPerson(person2);
-        peopleGroup.addPerson(person3);
-        peopleGroup.addPerson(person4);
+        pizza2.addIngredient("thinDough");
+        pizza2.addIngredient("paper Salami");
+        pizza2.addIngredient("baked Salami");
+        pizza2.addIngredient("spicy Salami");
+        pizza2.addIngredient("ketchup");
 
-        System.out.println(peopleGroup.getUniqueStaff());
+        pizza3.addIngredient("thinDough");
+        pizza3.addIngredient("fresh tomato");
+        pizza3.addIngredient("corn");
+        pizza3.addIngredient("cheader");
+        pizza3.addIngredient("salami");
 
-        person2.removeStuff();
+        pizza4.addIngredient("classicDough");
+        pizza4.addIngredient("baked onion");
+        pizza4.addIngredient("mashrooms");
+        pizza4.addIngredient("mozarella");
+        pizza4.addIngredient("ketchup");
 
-        System.out.println(peopleGroup.getUniqueStaff());
+        Orders order1 = new Orders();
 
-        person1.addStuff("Pencil");
+        order1.addPizza(pizza1);
+        order1.addPizza(pizza2);
+        order1.setDelivery(200.00);
+        order1.setDelivery(150.00);
 
-        System.out.println(peopleGroup.getUniqueStaff());
+        System.out.println(order1.calculatePriceOfOrder());
 
-    //    System.out.println(peopleGroup.amountOfStuff());
+        order1.addPizza(pizza3);
 
-        peopleGroup.randomExchangeOfStuff();
+        System.out.println(order1.calculatePriceOfOrder());
 
 
 //        st1.addOfStuff("Book");
